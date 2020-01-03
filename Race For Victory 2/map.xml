@@ -19,10 +19,10 @@
     <team color="dark red" max="32">Red</team>
 </teams>
 <spawns>
-    <spawn team="blue" yaw="0" kit="spawn-kit">
+    <spawn team="blue" yaw="0">
         <cylinder base="0.5,4,-54.5" radius="2.5" height="0"/>
     </spawn>
-    <spawn team="red" yaw="180" kit="spawn-kit">
+    <spawn team="red" yaw="180">
         <cylinder base="0.5,4,69.5" radius="2.5" height="0"/>
     </spawn>
     <default yaw="270">
@@ -30,17 +30,6 @@
     </default>
 </spawns>
 <kits>
-    <kit name="spawn-kit">
-        <item slot="0">iron_sword</item>
-        <item slot="1">bow</item>
-        <item slot="2" enchantment="durability:3;dig speed:1">iron_pickaxe</item>
-        <item slot="3" amount="64" damage="2">log</item>
-        <item slot="4" amount="64">cooked_fish</item>
-        <item slot="5" amount="64">glass</item>
-        <item slot="6" amount="64">arrow</item>
-        <item slot="7" amount="64">arrow</item>
-        <item slot="8" amount="64">ladder</item>
-    </kit>
     <kit name="survival">
         <game-mode>survival</game-mode>
     </kit>

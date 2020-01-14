@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>Persisto</name> 
-<version>1.3.3</version> 
+<version>1.3.4</version> 
 <objective>Capture both wools to win.</objective>
 <authors>
     <author uuid="8f9344cf-7367-4e28-9f24-5c66422f28c9" contribution="Aesthetics, XML and gameplay ideas."/> <!-- Timothee38 -->
@@ -81,7 +81,6 @@
     </filter>
     <filter name="allow-some" parents="deny-all">
         <allow>
-        	<team>red</team>
             <block>web</block>
             <block>wool</block>
             <block>step</block>

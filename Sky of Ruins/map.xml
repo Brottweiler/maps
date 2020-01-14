@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.4.0">
 <name>Sky of Ruins</name>
-<version>1.4.3</version>
+<version>1.4.4</version>
 <objective>Leak the lava from the enemy's core and destroy their monument.</objective>
 <authors>
     <author uuid="f876b863-1ccd-4ae2-acad-8a09e2209e81" contribution="Main Map Building"/>
@@ -119,10 +119,10 @@
     <apply block="never" message="You may not edit the spawn area and the tower!">
         <region>
             <union>
-                <cuboid id="red-area1" max="-890,126,987" min="-899,42,978"/>
+                <cuboid id="red-area1" max="-891,126,986" min="-898,42,979"/>
                 <cuboid id="red-area2" max="-823,39,973" min="-831,33,969"/>
                 <cuboid id="red-area3" max="-903,36,985" min="-915,41,980"/>
-                <cuboid id="blue-area1" max="-814,126,978" min="-805,42,987"/>
+                <cuboid id="blue-area1" max="-813,126,979" min="-806,42,986"/>
                 <cuboid id="blue-area2" max="-881,39,991" min="-873,33,996"/>
                 <cuboid id="blue-area3" max="-801,36,985" min="-789,41,980"/>
             </union>

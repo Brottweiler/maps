@@ -211,9 +211,6 @@
     <item>stone sword</item>
 </itemremove>
 <killreward>
-    <filter>
-        <kill-streak count="1" repeat="true"/>
-    </filter>
     <item amount="3">arrow</item>
 </killreward>
 <gamerules>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.0">
 <name>Ring Race</name>
-<version>1.6.4</version>
+<version>1.6.5</version>
 <objective>Capture the wool from the enemies wool rooms and return them to your victory monument</objective>
 <authors>
     <author uuid="e8d1ad63-bd9e-4d0e-9a6c-27f2b047d924"/> <!-- Mikeg542 -->
@@ -112,14 +112,14 @@
     <!--   spawn room protection   -->
     <apply block="deny-all" message="You may not modify the spawn!">
         <cuboid name="purple-storage-room" min="27,15,-11" max="12,28,5"/>
-        <cuboid name="orange-storage-room" min="166,15,-11" max="152,28,5"/>
+        <cuboid name="orange-storage-room" min="167,15,-11" max="152,28,5"/>
     </apply>
     <!--   prevent teams from entering each other's spawns   -->
     <apply enter="only-purple" message="You may not enter purple's spawn room!">
-        <region name="purple-storage-room"/>
+        <cuboid name="purple-spawn-room" min="23,15,-10" max="16,20,5"/>
     </apply>
     <apply enter="only-orange" message="You may not enter orange's spawn room!">
-        <region name="orange-storage-room"/>
+        <cuboid name="orange-spawn-room" min="163,15,-10" max="156,20,5"/>
     </apply>
 </regions>
 <wools>

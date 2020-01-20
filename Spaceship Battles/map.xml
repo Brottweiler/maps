@@ -70,11 +70,11 @@
     </apply>
 </regions>
 <maxbuildheight>70</maxbuildheight>
-<spawns>
-    <spawn team="blue" kit="spawn" yaw="180">
+<spawns kit="spawn">
+    <spawn team="blue" yaw="180">
         <cuboid min="295.5,72,88.5" max="298.5,72,91.5"/>
     </spawn>
-    <spawn team="red" kit="spawn" yaw="0">
+    <spawn team="red" yaw="0">
         <cuboid min="295.5,72,124.5" max="298.5,72,127.5"/>
     </spawn>
     <default yaw="270">

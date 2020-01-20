@@ -19,8 +19,8 @@
     </filter>
 </filters>
 <teams>
-    <team color="blue" kit="spawn" max="50">Blue Team</team>
-    <team color="dark red" kit="spawn" max="50">Red Team</team>
+    <team color="blue" max="50">Blue Team</team>
+    <team color="dark red" max="50">Red Team</team>
 </teams>
 <kits>
     <kit name="spawn">
@@ -70,7 +70,7 @@
     <item>iron chestplate</item>
     <item>gold helmet</item>
 </itemremove>
-<spawns>
+<spawns kit="spawn">
     <spawn team="blue" yaw="270">
         <cuboid min="4.5,91,-34" max="7.5,91,-31"/>
     </spawn>

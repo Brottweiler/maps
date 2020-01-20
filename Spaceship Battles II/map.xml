@@ -22,11 +22,11 @@
         <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>
 </kits>
-<spawns>
-    <spawn team="blue" kit="spawn" yaw="90">
+<spawns kit="spawn">
+    <spawn team="blue" yaw="90">
         <cuboid min="208.5,97,360.5" max="214.5,97,362.5"/>
     </spawn>
-    <spawn team="red" kit="spawn" yaw="90">
+    <spawn team="red" yaw="90">
         <cuboid min="208.5,97,193.5" max="214.5,97,195.5"/>
     </spawn>
     <default yaw="270">

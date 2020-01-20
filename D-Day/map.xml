@@ -11,11 +11,11 @@
     <team color="dark red" max="32">Red</team>
     <team color="blue" max="32">Blue</team>
 </teams>
-<spawns>
-    <spawn team="red" kit="spawn" yaw="-0">
+<spawns kit="spawn">
+    <spawn team="red" yaw="-0">
         <block>133,98.5,-250</block>
     </spawn>
-    <spawn team="blue" kit="spawn" yaw="-0">
+    <spawn team="blue" yaw="-0">
         <block>-132,98.5,-250</block>
     </spawn>
     <default yaw="179">

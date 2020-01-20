@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.0.0">
 <name>Airship Battle</name>
-<version>1.0.4</version>
+<version>1.0.5</version>
 <objective>Leak lava from the enemy's obsidian core into the void.</objective>
 <authors>
     <author uuid="30e27366-0b14-4076-8f55-0819ece49ce3">dewtroid</author>
@@ -18,9 +18,20 @@
         </not>
     </filter>
 </filters>
+<kits>
+    <kit name="spawn-kit">
+        <item slot="0">iron sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="16" damage="1">wood</item>
+        <item slot="3" amount="28">cooked fish</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
+        <helmet>gold helmet</helmet>
+        <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+    </kit>
+</kits>
 <teams>
-    <team color="blue" max="50">Blue Team</team>
-    <team color="dark red" max="50">Red Team</team>
+    <team color="blue" kit="spawn-kit" max="50">Blue Team</team>
+    <team color="dark red" kit="spawn-kit" max="50">Red Team</team>
 </teams>
 <regions>
     <apply block-place="deny-dispenser" message="Dispensers are disabled on this map!">
@@ -46,11 +57,18 @@
         </complement>
     </apply>
 </regions>
+<toolrepair>
+    <item>iron sword</item>
+    <item>iron pickaxe</item>
+</toolrepair>
 <itemremove>
     <item>shears</item>
     <item>obsidian</item>
     <item>gold block</item>
     <item>dispenser</item>
+    <item>cooked fish</item>
+    <item>iron chestplate</item>
+    <item>gold helmet</item>
 </itemremove>
 <spawns>
     <spawn team="blue" yaw="270">

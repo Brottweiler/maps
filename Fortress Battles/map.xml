@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
 <name>Fortress Battles</name>
-<version>3.0.5</version>
+<version>3.0.6</version>
 <objective>Leak lava from the enemy's obsidian core into the void.</objective>
 <rules>
     <rule>You cannot place dispensers on the map!</rule>
@@ -26,8 +26,8 @@
 </cores>
 <maxbuildheight>72</maxbuildheight>
 <spawns>
-    <spawn team="red" yaw="90"><point>1249,27,519</point></spawn>
-    <spawn team="blue" yaw="270"><point>1286,27,519</point></spawn>
+    <spawn team="red" kit="spawn-kit" yaw="90"><point>1249,27,519</point></spawn>
+    <spawn team="blue" kit="spawn-kit" yaw="270"><point>1286,27,519</point></spawn>
     <default yaw="180"><cylinder base="1267,27,518" radius="7" height="0"/></default>
 </spawns>
 <filters>
@@ -50,7 +50,24 @@
         <rectangle min="1301,547" max="1234,517"/>
     </apply>
 </regions>
+<kits>
+    <kit name="spawn-kit">
+        <item slot="0">iron sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="16">wood</item>
+        <item slot="3" amount="28">cooked fish</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
+        <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+    </kit>
+</kits>
+<toolrepair>
+    <item>iron sword</item>
+    <item>iron pickaxe</item>
+</toolrepair>
 <itemremove>
     <item>obsidian</item>
+    <item>shears</item>
+    <item>cooked fish</item>
+    <item>iron chestplate</item>
 </itemremove>
 </map>

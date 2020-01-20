@@ -10,18 +10,18 @@
 <rules>
     <rule>Dispensers are disabled</rule>
 </rules>
-    <teams>
-        <team color="dark red" max="24">Red</team>
-        <team color="blue" max="24">Blue</team>
-    </teams>
+<teams>
+    <team color="dark red" max="24">Red</team>
+    <team color="blue" max="24">Blue</team>
+</teams>
 <kits>
-    <kit name="spawn-kit">
+    <kit name="spawn">
         <item slot="0">iron sword</item>
         <item slot="1">iron pickaxe</item>
         <item slot="2" amount="16">cobblestone</item>
         <item slot="3" amount="48">bread</item>
-        <chestplate enchantment="protection:1">iron chestplate</chestplate>
         <item slot="17" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>
     <kit name="give-resistance" force="true">
         <potion duration="7" amplifier="3">damage resistance</potion>
@@ -70,10 +70,10 @@
 </regions>
 <maxbuildheight>70</maxbuildheight>
 <spawns>
-    <spawn team="blue" kit="spawn-kit" yaw="180">
+    <spawn team="blue" kit="spawn" yaw="180">
         <cuboid min="295.5,72,88.5" max="298.5,72,91.5"/>
     </spawn>
-    <spawn team="red" kit="spawn-kit" yaw="0">
+    <spawn team="red" kit="spawn" yaw="0">
         <cuboid min="295.5,72,124.5" max="298.5,72,127.5"/>
     </spawn>
     <default yaw="270">

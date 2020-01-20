@@ -18,21 +18,21 @@
         </not>
     </filter>
 </filters>
+<teams>
+    <team color="blue" kit="spawn" max="50">Blue Team</team>
+    <team color="dark red" kit="spawn" max="50">Red Team</team>
+</teams>
 <kits>
-    <kit name="spawn-kit">
+    <kit name="spawn">
         <item slot="0">iron sword</item>
         <item slot="1">iron pickaxe</item>
         <item slot="2" amount="16" damage="1">wood</item>
         <item slot="3" amount="28">cooked fish</item>
-        <chestplate enchantment="protection:1">iron chestplate</chestplate>
-        <helmet>gold helmet</helmet>
         <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+        <helmet>gold helmet</helmet>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>
 </kits>
-<teams>
-    <team color="blue" kit="spawn-kit" max="50">Blue Team</team>
-    <team color="dark red" kit="spawn-kit" max="50">Red Team</team>
-</teams>
 <regions>
     <apply block-place="deny-dispenser" message="Dispensers are disabled on this map!">
         <rectangle min="-oo,-oo" max="oo,oo"/>

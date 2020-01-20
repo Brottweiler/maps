@@ -9,6 +9,16 @@
 <rules>
     <rule>Dispensers cannot be placed on this map</rule>
 </rules>
+<kits>
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="16">wood</item>
+        <item slot="3" amount="28">cooked beef</item>
+        <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
+    </kit>
+</kits>
 <teams>
     <team color="blue" max="24">Blue</team>
     <team color="dark red" max="24">Red</team>
@@ -80,16 +90,6 @@
         </not>
     </filter>
 </filters>
-<kits>
-    <kit name="spawn-kit">
-        <item slot="0">iron sword</item>
-        <item slot="1">iron pickaxe</item>
-        <item slot="2" amount="16">wood</item>
-        <item slot="3" amount="28">cooked beef</item>
-        <chestplate enchantment="protection:1">iron chestplate</chestplate>
-        <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
-    </kit>
-</kits>
 <toolrepair>
     <item>iron sword</item>
     <item>iron pickaxe</item>
@@ -100,10 +100,10 @@
     <item>iron chestplate</item>
 </itemremove>
 <spawns>
-    <spawn team="blue" kit="spawn-kit" yaw="90">
+    <spawn team="blue" kit="spawn" yaw="90">
         <cuboid min="66.5,157,75.5" max="69.5,157,78.5"/>
     </spawn>
-    <spawn team="red" kit="spawn-kit" yaw="270">
+    <spawn team="red" kit="spawn" yaw="270">
         <cuboid min="-90.5,157,75.5" max="-87.5,157,78.5"/>
     </spawn>
     <default yaw="180">

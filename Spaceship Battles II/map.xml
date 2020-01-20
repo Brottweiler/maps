@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.0.0">
 <name>Spaceship Battles II</name>
-<version>1.1.3</version>
+<version>1.1.4</version>
 <objective>Leak lava from the enemy's obsidian core and destroy the enemy's Comm Tower made of coal ore.</objective>
 <authors>
     <author uuid="73711d58-d786-4007-8c95-c93b1311de1a"/> <!-- Oversoul96 -->
@@ -12,15 +12,21 @@
     <team color="dark red" max="50">Red</team>
 </teams>
 <kits>
-    <kit name="shears">
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="8">cobblestone</item>
+        <item slot="3" amount="8">wood</item>
+        <item slot="4" amount="48">bread</item>
         <item slot="17" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>
 </kits>
 <spawns>
-    <spawn team="blue" kit="shears" yaw="90">
+    <spawn team="blue" kit="spawn" yaw="90">
         <cuboid min="208.5,97,360.5" max="214.5,97,362.5"/>
     </spawn>
-    <spawn team="red" kit="shears" yaw="90">
+    <spawn team="red" kit="spawn" yaw="90">
         <cuboid min="208.5,97,193.5" max="214.5,97,195.5"/>
     </spawn>
     <default yaw="270">
@@ -53,9 +59,15 @@
     </destroyable>
 </destroyables>
 <maxbuildheight>61</maxbuildheight>
+<toolrepair>
+    <item>iron sword</item>
+    <item>iron pickaxe</item>
+</toolrepair>
 <itemremove>
     <item>shears</item>
     <item>obsidian</item>
     <item>coal</item>
+    <item>bread</item>
+    <item>iron chestplate</item>
 </itemremove>
 </map>

@@ -18,8 +18,9 @@
     <kit name="spawn">
         <item slot="0">iron sword</item>
         <item slot="1">iron pickaxe</item>
-        <item slot="2" amount="16">cobblestone</item>
-        <item slot="3" amount="48">bread</item>
+        <item slot="2" amount="8">cobblestone</item>
+        <item slot="3" amount="8">wood</item>
+        <item slot="4" amount="48">bread</item>
         <item slot="17" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
         <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>

@@ -15,7 +15,12 @@
         <team color="blue" max="24">Blue</team>
     </teams>
 <kits>
-    <kit name="shears">
+    <kit name="spawn-kit">
+        <item slot="0">iron sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="16">cobblestone</item>
+        <item slot="3" amount="48">bread</item>
+        <chestplate enchantment="protection:1">iron chestplate</chestplate>
         <item slot="17" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
     </kit>
     <kit name="give-resistance" force="true">
@@ -65,10 +70,10 @@
 </regions>
 <maxbuildheight>70</maxbuildheight>
 <spawns>
-    <spawn team="blue" kit="shears" yaw="180">
+    <spawn team="blue" kit="spawn-kit" yaw="180">
         <cuboid min="295.5,72,88.5" max="298.5,72,91.5"/>
     </spawn>
-    <spawn team="red" kit="shears" yaw="0">
+    <spawn team="red" kit="spawn-kit" yaw="0">
         <cuboid min="295.5,72,124.5" max="298.5,72,127.5"/>
     </spawn>
     <default yaw="270">
@@ -105,9 +110,14 @@
         </destroyable>
     </destroyables>
 </destroyables>
+<toolrepair>
+    <item>iron sword</item>
+    <item>iron pickaxe</item>
+</toolrepair>
 <itemremove>
     <item>obsidian</item>
     <item>shears</item>
     <item>coal</item>
+    <item>bread</item>
 </itemremove>
 </map>

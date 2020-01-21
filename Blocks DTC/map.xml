@@ -12,16 +12,29 @@
     <team color="dark red" max="40">Red</team>
 </teams>
 <kits>
-    <kit name="spawn-protection">
+    <kit name="spawn">
+        <item slot="0">diamond sword</item>
+        <item slot="1">bow</item>
+        <item slot="2" enchantment="efficiency:2,unbreaking:3">iron pickaxe</item>
+        <item slot="3" amount="64" damage="2">log</item>
+        <item slot="4" amount="64">melon block</item>
+        <item slot="8" amount="64">golden apple</item>
+        <item slot="28" amount="64">arrow</item>
         <potion amplifier="5" duration="10">damage resistance</potion>
         <potion amplifier="1" duration="8">strength</potion>
     </kit>
+    <kit name="red-kit" parents="spawn">
+        <item slot="5" amount="64" damage="14">wool</item>
+    </kit>
+    <kit name="blue-kit" parents="spawn">
+        <item slot="5" amount="64" damage="11">wool</item>
+    </kit>
 </kits>
-<spawns>
-    <spawn team="blue" kit="spawn-protection" yaw="90">
+<spawns kit="spawn">
+    <spawn team="blue" kit="blue" yaw="90">
         <cylinder base="123,25,72" radius="3" height="0"/>
     </spawn>
-    <spawn team="red" kit="spawn-protection" yaw="270">
+    <spawn team="red" kit="red" yaw="270">
         <cylinder base="-89,25,72" radius="3" height="0"/>
     </spawn>
     <default yaw="180">
@@ -96,6 +109,21 @@
     </core>
 </cores>
 <maxbuildheight>90</maxbuildheight>
+<killreward>
+    <item amount="16">arrow</item>
+</killreward>
+<toolrepair>
+    <tool>diamond sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+</toolrepair>
+<itemremove>
+    <item>obsidian</item>
+    <item>golden apple</item>
+    <item>log</item>
+    <item>wool</item>
+    <item>arrow</item>
+</itemremove>
 <tutorial>
     <stage title="Destroy the Core">
         <message>

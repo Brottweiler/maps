@@ -61,8 +61,8 @@
     <mode material="glass" after="20m" name="GLASS CORE MODE"/>
 </modes>
 <toolrepair>
-    <item>iron sword</item>
-    <item>iron pickaxe</item>
+    <tool>iron sword</tool>
+    <tool>iron pickaxe</tool>
 </toolrepair>
 <itemremove>
     <item>obsidian</item>

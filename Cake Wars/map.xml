@@ -112,8 +112,8 @@
     </core>
 </cores>
 <toolrepair>
-    <item>stone sword</item>
-    <item>stone pickaxe</item>
+    <tool>stone sword</tool>
+    <tool>stone pickaxe</tool>
 </toolrepair>
 <itemremove>
     <item>cooked fish</item>

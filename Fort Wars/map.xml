@@ -25,8 +25,8 @@
     </kit>
 </kits>
 <toolrepair>
-    <item>iron sword</item>
-    <item>iron pickaxe</item>
+    <tool>iron sword</tool>
+    <tool>iron pickaxe</tool>
 </toolrepair>
 <itemremove>
     <item>shears</item>

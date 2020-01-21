@@ -14,7 +14,18 @@
     <team color="dark red" max="12">Red</team>
     <team color="blue" max="12">Blue</team>
 </teams>
-<spawns>
+<kits>
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">stone pickaxe</item>
+        <item slot="2" damage="1">wood</item>
+        <item slot="3" amount="16">cooked fish</item>
+        <chestplate enchantment="protection:1">leather chestplate</chestplate>
+        <potion duration="5" amplifier="4">heal</potion>
+        <potion duration="5" amplifier="10">damage resistance</potion>
+    </kit>
+</kits>
+<spawns kit="spawn">
     <spawn team="blue" yaw="270">
         <cuboid min="16.5,66,-32.5" max="18.5,66,-30.5"/>
     </spawn>
@@ -100,4 +111,12 @@
         <cuboid min="-29,64,13" max="-24,70,20"/>
     </core>
 </cores>
+<toolrepair>
+    <item>stone sword</item>
+    <item>stone pickaxe</item>
+</toolrepair>
+<itemremove>
+    <item>cooked fish</item>
+    <item>leather chestplate</item>
+</itemremove>
 </map>

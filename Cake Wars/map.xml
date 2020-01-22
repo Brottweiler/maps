@@ -25,11 +25,11 @@
         <potion duration="5" amplifier="10">damage resistance</potion>
     </kit>
 </kits>
-<spawns kit="spawn">
-    <spawn team="blue" yaw="270">
+<spawns>
+    <spawn team="blue" kit="spawn" yaw="270">
         <cuboid min="16.5,66,-32.5" max="18.5,66,-30.5"/>
     </spawn>
-    <spawn team="red" yaw="90">
+    <spawn team="red" kit="spawn" yaw="90">
         <cuboid min="-17.5,66,-32.5" max="-15.5,66,-30.5"/>
     </spawn>
     <default yaw="180">

@@ -33,11 +33,11 @@
     <item>apple</item>
     <item>iron chestplate</item>
 </itemremove>
-<spawns kit="spawn">
-    <spawn team="red" safe="true" yaw="0">
+<spawns>
+    <spawn team="red" kit="spawn" safe="true" yaw="0">
         <point>-151.5,38,-141.5</point>
     </spawn>
-    <spawn team="blue" safe="true" yaw="180">
+    <spawn team="blue" kit="spawn" safe="true" yaw="180">
         <point>-151.5,38,-165.5</point>
     </spawn>
     <default yaw="90">

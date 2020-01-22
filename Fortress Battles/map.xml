@@ -35,9 +35,9 @@
     <core team="blue"><cuboid min="1302,22,589" max="1307,30,597"/></core>
 </cores>
 <maxbuildheight>72</maxbuildheight>
-<spawns kit="spawn">
-    <spawn team="red" yaw="90"><point>1249,27,519</point></spawn>
-    <spawn team="blue" yaw="270"><point>1286,27,519</point></spawn>
+<spawns>
+    <spawn team="red" kit="spawn" yaw="90"><point>1249,27,519</point></spawn>
+    <spawn team="blue" kit="spawn" yaw="270"><point>1286,27,519</point></spawn>
     <default yaw="180"><cylinder base="1267,27,518" radius="7" height="0"/></default>
 </spawns>
 <filters>

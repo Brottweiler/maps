@@ -99,11 +99,11 @@
     <item>cooked beef</item>
     <item>iron chestplate</item>
 </itemremove>
-<spawns kit="spawn">
-    <spawn team="blue"  yaw="90">
+<spawns>
+    <spawn team="blue" kit="spawn"  yaw="90">
         <cuboid min="66.5,157,75.5" max="69.5,157,78.5"/>
     </spawn>
-    <spawn team="red" yaw="270">
+    <spawn team="red" kit="spawn" yaw="270">
         <cuboid min="-90.5,157,75.5" max="-87.5,157,78.5"/>
     </spawn>
     <default yaw="180">

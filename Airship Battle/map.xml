@@ -70,11 +70,11 @@
     <item>iron chestplate</item>
     <item>gold helmet</item>
 </itemremove>
-<spawns kit="spawn">
-    <spawn team="blue" yaw="270">
+<spawns>
+    <spawn team="blue" kit="spawn" yaw="270">
         <cuboid min="4.5,91,-34" max="7.5,91,-31"/>
     </spawn>
-    <spawn team="red" yaw="90">
+    <spawn team="red" kit="spawn" yaw="90">
         <cuboid min="-30.5,91,-34" max="-27.5,91,-31"/>
     </spawn>
     <default yaw="180">

@@ -2,7 +2,7 @@
 <map proto="1.0.0">
 <include src="tutorial.xml"/>
 <name>Blocks DTC</name>
-<version>1.4.4</version>
+<version>1.4.5</version>
 <objective>Leak lava from the enemy's obsidian core.</objective>
 <authors>
     <author uuid="060baa18-2852-40d8-afcb-e61607c04be3"/> <!-- pepsidawg00 -->
@@ -12,16 +12,32 @@
     <team color="dark red" max="40">Red</team>
 </teams>
 <kits>
-    <kit name="spawn-protection">
+    <kit name="spawn">
+        <item slot="0">diamond sword</item>
+        <item slot="1">bow</item>
+        <item slot="2" enchantment="efficiency:2;unbreaking:3">iron pickaxe</item>
+        <item slot="3" enchantment="efficiency:1">diamond axe</item>
+        <item slot="4" amount="64" damage="2">log</item>
+        <item slot="6" amount="64">melon block</item>
+        <item slot="7" enchantment="efficiency:1">shears</item>
+        <item slot="8" amount="64">golden apple</item>
+        <item slot="28" amount="64">arrow</item>
+        <item slot="30">diamond spade</item>
         <potion amplifier="5" duration="10">damage resistance</potion>
         <potion amplifier="1" duration="8">strength</potion>
     </kit>
+    <kit name="red" parents="spawn">
+        <item slot="5" amount="64" damage="14">wool</item>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <item slot="5" amount="64" damage="11">wool</item>
+    </kit>
 </kits>
 <spawns>
-    <spawn team="blue" kit="spawn-protection" yaw="90">
+    <spawn team="blue" kit="blue" yaw="90">
         <cylinder base="123,25,72" radius="3" height="0"/>
     </spawn>
-    <spawn team="red" kit="spawn-protection" yaw="270">
+    <spawn team="red" kit="red" yaw="270">
         <cylinder base="-89,25,72" radius="3" height="0"/>
     </spawn>
     <default yaw="180">
@@ -96,6 +112,25 @@
     </core>
 </cores>
 <maxbuildheight>90</maxbuildheight>
+<killreward>
+    <item amount="16">arrow</item>
+</killreward>
+<toolrepair>
+    <tool>diamond sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+    <tool>diamond axe</tool>
+    <tool>diamond spade</tool>
+    <tool>shears</tool>
+</toolrepair>
+<itemremove>
+    <item>obsidian</item>
+    <item>golden apple</item>
+    <item>log</item>
+    <item>wool</item>
+    <item>arrow</item>
+    <item>melon block</item>
+</itemremove>
 <tutorial>
     <stage title="Destroy the Core">
         <message>

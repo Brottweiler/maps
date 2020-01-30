@@ -9,7 +9,6 @@
 <contributors>
     <contributor uuid="41373965-b60a-40d5-8fad-72e61d951ea2" contribution="Aesthetics and spawn kit help"/> <!-- Rokosnocone -->
 </contributors>
-<terrain world="normal"/>
 <maxbuildheight>32</maxbuildheight>
 <teams>
     <team color="blue" max="16" max-overfill="20">Blue</team>

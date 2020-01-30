@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.0">
 <name>Medieval Warfare</name>
-<version>1.6.10</version>
+<version>1.6.11</version>
 <objective>Leak lava from the enemy's obsidian core.</objective>
 <authors>
     <author uuid="c1ea235d-4224-46e4-ba4a-638838f6d039"/> <!-- Daffy_Duck01 -->
@@ -13,8 +13,8 @@
     <kit name="spawn">
         <item slot="0">iron sword</item>
         <item slot="1">iron pickaxe</item>
-        <item slot="2" amount="16">wood</item>
-        <item slot="3" amount="28">cooked beef</item>
+        <item slot="2" amount="8">wood</item>
+        <item slot="3" amount="2">cooked beef</item>
         <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
         <chestplate enchantment="protection:1">iron chestplate</chestplate>
     </kit>

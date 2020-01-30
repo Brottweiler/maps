@@ -2,7 +2,7 @@
 <map proto="1.3.2">
 <include src="tutorial.xml"/>
 <name>Airship Aces</name>
-<version>1.0.2</version>
+<version>1.0.3</version>
 <objective>Leak lava into the void below to win!</objective>
 <authors>
     <author uuid="5ca79703-1be6-4dca-9073-59d024eb8bb0"/> <!-- koipen -->
@@ -16,15 +16,27 @@
     <team color="dark red" max="15">Red</team>
 </teams>
 <kits>
-    <kit name="shears">
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">iron pickaxe</item>
+        <item slot="2" amount="8">wood</item>
+        <item slot="3" amount="4">cooked fish</item>
         <item slot="8" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="cd0000">leather helmet</helmet>
+        <chestplate color="cd0000" enchantment="protection:1">leather chestplate</chestplate>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0066cc">leather helmet</helmet>
+        <chestplate color="0066cc" enchantment="protection:1">leather chestplate</chestplate>
     </kit>
 </kits>
 <spawns>
-    <spawn team="blue" kit="shears" yaw="0">
+    <spawn team="blue" kit="blue" yaw="0">
         <point>-21.5,60,-52.5</point>
     </spawn>
-    <spawn team="red" kit="shears" yaw="180">
+    <spawn team="red" kit="red" yaw="180">
         <point>-21.5,60,-84.5</point>
     </spawn>
     <default yaw="90">
@@ -70,9 +82,15 @@
     </core>
 </cores>
 <timelock>on</timelock>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>iron pickaxe</tool>
+</toolrepair>
 <itemremove>
     <item>shears</item>
     <item>obsidian</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
 </itemremove>
 <gamerules>
     <doFireTick>false</doFireTick>

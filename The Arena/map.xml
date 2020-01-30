@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.0">
 <name>The Arena</name>
-<version>1.2.0</version>
+<version>1.2.1</version>
 <objective>Be the team with the least amount of deaths after 15 minutes.</objective>
 <authors>
     <author uuid="43b59b5d-f75c-4a5c-9146-f9d5e6cbdac4"/> <!-- Gone52 -->
@@ -37,7 +37,7 @@
             <rectangle name="red-spawn-void2" min="84,5" max="87,26"/>
         </union>
     </apply>
-    
+
     <apply block="deny-all">
         <rectangle min="-oo,-oo" max="oo,oo"/>
     </apply>
@@ -49,7 +49,7 @@
         <item slot="2" amount="1">golden apple</item>
         <item slot="3" amount="32">cooked fish</item>
         <item slot="28" amount="1">arrow</item>
-        <potion duration="900" amplifier="1">speed</potion>
+        <potion duration="oo" amplifier="1">speed</potion>
         <potion duration="5" amplifier="1">heal</potion>
         <potion duration="10">damage resistance</potion>
     </kit>

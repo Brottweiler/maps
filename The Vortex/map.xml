@@ -2,7 +2,7 @@
 <map proto="1.4.0">
 <name>The Vortex</name>
 <version>0.1</version>
-<objective>Be the team with the least amount of deaths after 10 minutes.</objective>
+<objective>Be the team with the most kills after 10 minutes.</objective>
 <authors>
     <author uuid="177803b2-797c-4089-aae1-5702ca259e2c"/> <!-- Onsole, lack of original author -->
 </authors>
@@ -31,11 +31,12 @@
     <kit id="spawn">
         <item slot="0">stone sword</item>
         <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="2">golden apple</item>
         <item slot="28" amount="1">arrow</item>
-        <item slot="3" damage="8226">potion</item> <!-- potion of swiftness 2 -->
+            <!--<item slot="3" damage="8226">potion</item>--> <!-- potion of swiftness 2 -->
         <effect duration="2">heal</effect>
         <effect duration="3">damage resistance</effect>
-            <!--<effect duration="oo" amplifier="2">speed</effect>--> <!-- Use this instead of potion? -->
+        <effect duration="oo" amplifier="2">speed</effect> <!-- Use this instead of potion? -->
     </kit>
     <kit id="red" parents="spawn">
         <helmet color="cd0000" unbreakable="true">leather helmet</helmet>
@@ -89,6 +90,11 @@
         </regions>
     </default>
 </spawns>
+<kill-rewards>
+    <kill-reward>
+        <item>golden apple</item>
+    </kill-reward>
+</kill-rewards>
 <toolrepair>
     <tool>stone sword</tool>
     <tool>bow</tool>
@@ -101,5 +107,6 @@
     <item>arrow</item>
     <item>glass bottle</item>
     <item>potion</item>
+    <item>golden apple</item>
 </itemremove>
 </map>

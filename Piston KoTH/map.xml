@@ -98,6 +98,7 @@
 <timelock>on</timelock>
 <toolrepair>
     <tool>stone sword</tool>
+    <tool>iron sword</tool>
     <tool>bow</tool>
 </toolrepair>
 <itemremove>

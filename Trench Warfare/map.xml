@@ -26,12 +26,12 @@
     <team id="reds" color="dark red" max="20" show-name-tags="allies">Red</team>
 </teams>
 <spawns> <!-- Not changed yet -->
-    <spawn team="blues" kit="blue">
+    <spawn team="blues">
         <regions yaw="0">
             <cylinder base="0.5, 20, -70.5" radius="2.5" height="1"/>
         </regions>
     </spawn>
-    <spawn team="reds" kit="red">
+    <spawn team="reds">
         <regions yaw="180">
             <cylinder base="0.5, 20, 70.5" radius="2.5" height="1"/>
         </regions>
@@ -42,124 +42,32 @@
         </regions>
     </default>
 </spawns>
-<kits> <!-- Copied from TW2, need to be changed -->
-    <kit name="main">
-        <item slot="6" amount="64">leaves</item>
-        <item slot="33" amount="32">tnt</item>
-        <item slot="7" amount="32" damage="2">wood</item>
-        <item slot="8" name="Health Kit">golden apple</item>
-    </kit>
-    <kit name="Soldier" parents="main">
-        <chestplate name="Combat Vest" locked="true" unbreakable="true">iron chestplate</chestplate>
-        <leggings name="Combat Pants" locked="true" unbreakable="true">iron leggings</leggings>
-        <boots name="Combat Boots" locked="true" unbreakable="true">iron boots</boots>
-        <item slot="0" name="Sabre" prevent-sharing="true" unbreakable="true">iron sword</item>
-        <item slot="1" name="Combat Axe" prevent-sharing="true" unbreakable="true">iron axe</item>
-        <item slot="2" name="Weakness Potion" amount="3" damage="16392" prevent-sharing="true">potion</item>
-    </kit>
-    <kit name="Archer" parents="main">
-        <potion duration="oo" amplifier="2">speed</potion>
-        <chestplate name="Ballistic Vest" enchantment="protection projectile:3" locked="true" unbreakable="true">iron chestplate</chestplate>
-        <item slot="0" name="Dagger" prevent-sharing="true" unbreakable="true">stone sword</item>
-        <item slot="1" name="Bow of Artemis" enchantment="arrow infinite:1;arrow damage:2" prevent-sharing="true" unbreakable="true">bow</item>
-        <item slot="2" name="Utility Axe" prevent-sharing="true" unbreakable="true">stone axe</item>
-        <item slot="28" name="arrow" amount="1" prevent-sharing="true">arrow</item>
-    </kit>
-    <kit name="Heavy" parents="main">
-        <chestplate name="Kevlar Vest" locked="true" unbreakable="true">diamond chestplate</chestplate>
-        <leggings name="Kevlar Pants" locked="true" unbreakable="true">iron leggings</leggings>
-        <boots name="Heavy Boots" locked="true" unbreakable="true">iron boots</boots>
-        <potion duration="oo" amplifier="1">slow</potion>
-        <item slot="0" name="Broadsword" prevent-sharing="true" unbreakable="true">diamond sword</item>
-        <item slot="1" name="Utility Axe" prevent-sharing="true" unbreakable="true">stone axe</item>
-    </kit>
-    <kit name="Scout" parents="main">
-        <leggings name="Lightweight Pants" locked="true" unbreakable="true">chainmail leggings</leggings>
-        <boots name="Boots of Hermes" enchantment="protection fall:2" locked="true" unbreakable="true">iron boots</boots>
-        <potion duration="oo" amplifier="3">speed</potion>
-        <potion duration="oo" amplifier="1">jump</potion>
-        <item slot="0" name="Tomahawk" enchantment="knockback:1" prevent-sharing="true" unbreakable="true">iron axe</item>
-        <item slot="1" name="Swiss Army Knife" enchantment="dig speed:5" prevent-sharing="true" unbreakable="true">shears</item>
-    </kit>
-    <kit name="Pyro" parents="main">
-        <helmet name="Insulated Mask" locked="true" unbreakable="true">iron helmet</helmet>
-        <leggings name="Insulated Pants" locked="true" unbreakable="true">iron leggings</leggings>
-        <potion duration="oo" amplifier="1">fire resistance</potion>
-        <item slot="0" name="Blow Torch" enchantment="fire aspect:2" prevent-sharing="true" unbreakable="true">stone sword</item>
-        <item slot="1" name="Blazing Bow" enchantment="arrow fire:1;arrow infinite:1" prevent-sharing="true" unbreakable="true">bow</item>
-        <item slot="2" name="Lighter" lore="`7Only 10 Uses!" damage="55" prevent-sharing="true">259</item>
-        <item slot="3" name="Utility Axe" prevent-sharing="true" unbreakable="true">stone axe</item>
-        <item slot="28" name="arrow" amount="1" prevent-sharing="true">arrow</item>
-    </kit>
-    <kit name="Assassin" parents="main">
-        <helmet name="Fedora" unbreakable="true">gold helmet</helmet>
-        <potion duration="oo" amplifier="1">speed</potion>
-        <potion duration="oo" amplifier="-2">health boost</potion>
-        <item slot="0" name="Combat Knife" prevent-sharing="true" unbreakable="true">iron sword</item>
-        <item slot="1" name="Syringe" lore="`7Only 1 Use!" enchantment="damage all:10" damage="1562" prevent-sharing="true">diamond sword</item>
-        <item slot="2" name="Combat Axe" prevent-sharing="true" unbreakable="true">iron axe</item>
-        <item slot="3" name="Invis-Watch" amount="1" damage="8206" prevent-sharing="true">potion</item>
-    </kit>
-
-    <!--Team-Specific Kits-->
-    <kit name="Red Soldier" parents="Soldier" potion-particles="true">
-        <helmet name="Ballistic Helmet" color="cd0000" enchantment="protection environmental:3;protection projectile:1" locked="true" unbreakable="true">leather helmet</helmet>
-    </kit>
-    <kit name="Blue Soldier" parents="Soldier" potion-particles="true">
-        <helmet name="Ballistic Helmet" color="0066cc" enchantment="protection environmental:3;protection projectile:1" locked="true" unbreakable="true">leather helmet</helmet>
-    </kit>
-    <kit name="Red Archer" parents="Archer" potion-particles="true">
-        <helmet name="Coif" color="cd0000" locked="true" unbreakable="true">leather helmet</helmet>
-        <leggings name="Leggings" color="cd0000" locked="true" unbreakable="true">leather leggings</leggings>
-        <boots name="Boots" color="cd0000" locked="true" unbreakable="true">leather boots</boots>
-    </kit>
-    <kit name="Blue Archer" parents="Archer" potion-particles="true">
-        <helmet name="Coif" color="0066cc" locked="true" unbreakable="true">leather helmet</helmet>
-        <leggings name="Leggings" color="0066cc" locked="true" unbreakable="true">leather leggings</leggings>
-        <boots name="Boots" color="0066cc" locked="true" unbreakable="true">leather boots</boots>
-    </kit>
-    <kit name="Red Heavy" parents="Heavy" potion-particles="true">
-        <helmet name="Bucket" color="cd0000" locked="true" unbreakable="true">leather helmet</helmet>
-    </kit>
-    <kit name="Blue Heavy" parents="Heavy" potion-particles="true">
-        <helmet name="Bucket" color="0066cc" locked="true" unbreakable="true">leather helmet</helmet>
-    </kit>
-    <kit name="Red Scout" parents="Scout" potion-particles="true">
-        <helmet name="Lightweight Helmet" color="cd0000" locked="true" unbreakable="true">leather helmet</helmet>
-        <chestplate name="Lightweight Vest" color="cd0000" locked="true" unbreakable="true">leather chestplate</chestplate>
-    </kit>
-    <kit name="Blue Scout" parents="Scout" potion-particles="true">
-        <helmet name="Lightweight Helmet" color="0066cc" locked="true" unbreakable="true">leather helmet</helmet>
-        <chestplate name="Lightweight Vest" color="0066cc" locked="true" unbreakable="true">leather chestplate</chestplate>
-    </kit>
-    <kit name="Red Pyro" parents="Pyro" potion-particles="true">
-        <chestplate name="Insulated Vest" color="cd0000" locked="true" unbreakable="true">leather chestplate</chestplate>
-        <boots name="Insulated Boots" color="cd0000" locked="true" unbreakable="true">leather boots</boots>
-    </kit>
-    <kit name="Blue Pyro" parents="Pyro" potion-particles="true">
-        <chestplate name="Insulated Vest" color="0066cc" locked="true" unbreakable="true">leather chestplate</chestplate>
-        <boots name="Insulated Boots" color="0066cc" locked="true" unbreakable="true">leather boots</boots>
-    </kit>
-    <kit name="Red Assassin" parents="Assassin" potion-particles="true">
-        <boots name="Boots of Silence" color="cd0000" unbreakable="true">leather boots</boots>
-    </kit>
-    <kit name="Blue Assassin" parents="Assassin" potion-particles="true">
-        <boots name="Boots of Silence" color="0066cc" unbreakable="true">leather boots</boots>
-    </kit>
-</kits>
+<classes family="offensive">
+    <class name="Soldier" default="true" description="Basic infantry equipped with medium armor and weapon." icon="iron sword">
+        <kit>
+            <item slot="0">iron sword</item>
+            <item slot="1" amount="16">egg</item>
+            <item slot="2" amount="5">grilled pork</item>
+            <helmet material="diamond helmet"/>
+            <chestplate material="iron chestplate"/>
+            <leggings material="iron leggings"/>
+            <boots material="iron boots"/>
+        </kit>
+    </class>
+</classes>
 <filters>
-    <filter name="only-red">
+    <filter id="only-red">
         <team>red</team>
     </filter>
-    <filter name="only-blue">
+    <filter id="only-blue">
         <team>blue</team>
     </filter>
-    <filter name="no-tnt">
+    <filter id="no-tnt">
         <deny>
             <block>tnt</block>
         </deny>
     </filter>
-    <filter name="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
+    <filter id="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
         <deny>
             <block>iron block</block>
             <block damage="5">step</block>
@@ -173,63 +81,59 @@
         </deny>
     </filter>
 </filters>
-<regions> <!-- From TW2 -->
+<regions>
     <!--Playing Field Regions-->
     <union name="bases">
-        <rectangle name="red-base" min="-143,-47" max="-73,48"/>
-        <rectangle name="blue-base" min="74,-47" max="144,48"/>
+        <rectangle name="red-base" min="60,-17" max="76,18"/>
+        <rectangle name="blue-base" min="-61,18" max="-77,-17"/>
     </union>
-    <union name="towers">
-        <circle name="red a1" center="-47,42" radius="4"/>
-        <circle name="red a2" center="-47,-42" radius="4"/>
-        <circle name="red b1" center="-16,42" radius="4"/>
-        <circle name="red b2" center="-16,-42" radius="4"/>
-        <circle name="blue a1" center="47,-42" radius="4"/>
-        <circle name="blue a2" center="47,42" radius="4"/>
-        <circle name="blue b1" center="16,-42" radius="4"/>
-        <circle name="blue b2" center="16,42" radius="4"/>
+    <union name="sides">
+        <rectangle name="red-side-right" min="59,-11" max="44,-17"/>
+        <rectangle name="red-side-left" min="59,12" max="44,18"/>
+        <rectangle name="blue-side-left" min="-60,12" max="-45,18"/>
+        <rectangle name="blue-side-right" min="-60,-11" max="-45,-17"/>
     </union>
     <union name="playable">
-        <rectangle name="main-area" min="-73,42" max="74,-41"/>
-        <region name="bases"/>
-        <region name="towers"/>
+        <rectangle name="main-area" min="59,-10" max="-60,11"/>
+        <region id="bases"/>
+        <region id="sides"/>
     </union>
     <union name="cannons">
-        <cuboid name="red-cannon1" min="-115,25,26" max="-110,20,27"/>
-        <cuboid name="red-cannon2" min="-115,25,14" max="-110,20,15"/>
-        <cuboid name="red-cannon3" min="-115,25,-14" max="-110,20,-13"/>
-        <cuboid name="red-cannon4" min="-115,25,-26" max="-110,20,-25"/>
-        <cuboid name="red-cannon-outpost" min="-62,18,0" max="-57,15,1"/>
-        <cuboid name="blue-cannon1" min="111,20,-26" max="116,25,-25"/>
-        <cuboid name="blue-cannon2" min="111,20,-14" max="116,25,-13"/>
-        <cuboid name="blue-cannon3" min="111,20,14" max="116,25,15"/>
-        <cuboid name="blue-cannon4" min="111,20,26" max="116,25,27"/>
-        <cuboid name="blue-cannon-outpost" min="58,15,0" max="63,18,1"/>
+        <cuboid name="red-cannon1" min="68,75,-5" max="65,77,-5"/>
+        <cuboid name="red-cannon2" min="71,75,0" max="63,76,1"/>
+        <cuboid name="red-cannon3" min="68,75,6" max="65,77,6"/>
+        <cuboid name="blue-cannon1" min="-69,75,6" max="-66,77,6"/>
+        <cuboid name="blue-cannon2" min="-72,75,1" max="-64,76,0"/>
+        <cuboid name="blue-cannon3" min="-69,75,-5" max="-66,77,-5"/>
     </union>
     <apply block="deny-all">
         <negative name="playable-inverse">
-            <region name="playable"/>
+            <region id="playable"/>
         </negative>
     </apply>
     <apply enter="only-red">
-        <rectangle name="red-home" min="-143,48" max="-104,-47"/>
+        <rectangle name="red-home" min="60,-17" max="76,18"/>
+        <rectangle name="red-home-side-right" min="59,-11" max="44,-17"/>
+        <rectangle name="red-home-side-left" min="59,12" max="44,18"/>
     </apply>
     <apply enter="only-blue">
-        <rectangle name="blue-home" min="105,48" max="144,-47"/>
+        <rectangle name="blue-home" min="-61,18" max="-77,-17"/>
+        <rectangle name="blue-home-side-left" min="-60,12" max="-45,18"/>
+        <rectangle name="blue-home-side-right" min="-60,-11" max="-45,-17"/>
     </apply>
     <apply block="deny-all">
-        <region name="blue-home"/>
-        <region name="red-home"/>
+        <region id="blue-home"/>
+        <region id="red-home"/>
     </apply>
     <apply block-break="break-restrictions" block="no-tnt">
         <complement>
-            <region name="playable"/>
-            <region name="red-home"/>
-            <region name="blue-home"/>
+            <region id="playable"/>
+            <region id="red-home"/>
+            <region id="blue-home"/>
         </complement>
     </apply>
     <apply block="allow-all">
-        <region name="cannons"/>
+        <region id="cannons"/>
     </apply>
 </regions>
 <tnt>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.4.0">
 <name>The Vortex</name>
-<version>0.1</version>
+<version>0.2</version>
 <objective>Be the team with the most kills after 10 minutes.</objective>
 <authors>
     <author uuid="177803b2-797c-4089-aae1-5702ca259e2c"/> <!-- Onsole, lack of original author -->
@@ -66,7 +66,7 @@
 <spawns safe="true">
     <spawn team="blues" kit="blue">
         <regions yaw="0">
-            <cylinder base="0.5, 20, -70.5" radius="2.5" height="1"/>
+            <cylinder base="0.5, 20, -69.5" radius="2.5" height="1"/>
         </regions>
     </spawn>
     <spawn team="reds" kit="red">
@@ -81,15 +81,37 @@
     </spawn>
     <spawn team="greens" kit="green">
         <regions yaw="-90">
-            <cylinder base="-70.5, 20, 0.5" radius="2.5" height="1"/>
+            <cylinder base="-69.5, 20, 0.5" radius="2.5" height="1"/>
         </regions>
     </spawn>
     <default>
         <regions yaw="0">
-            <cylinder base="0.5, 8, 0.5" radius="10.5" height="1"/>
+            <cylinder base="0.5, 2, 0.5" radius="10.5" height="1"/>
         </regions>
     </default>
 </spawns>
+<filters>
+    <not id="no-void">
+        <void/>
+    </not>
+</filters>
+<regions>
+    <apply block="never" message="You may not modify the spawns!">
+        <region>
+            <union>
+                <circle id="blue-spawn" center="0.5, -69.5" radius="3.5"/>
+                <circle id="red-spawn" center="0.5, 70.5" radius="3.5"/>
+                <circle id="orange-spawn" center="70.5, 0.5" radius="3.5"/>
+                <circle id="green-spawn" center="-69.5, 0.5" radius="3.5"/>
+            </union>
+        </region>
+    </apply>
+    <apply block="no-void" message="You may not modify the void area!">
+        <negative>
+            <rectangle id="playing-field" min="75,-75" max="-75,75"/>
+        </negative>
+    </apply>
+</regions>
 <kill-rewards>
     <kill-reward>
         <item>golden apple</item>

@@ -1,6 +1,6 @@
 <map proto="1.4.0">
 <name>Unity</name>
-<version>1.0.0</version>
+<version>1.0.1</version>
 <objective>Retrieve the enemy wool and place it on your monument!</objective>
 <authors>
     <author uuid="2a289d2a-d970-49c5-9a6c-01fc0264e317"/> <!-- StealthMedia -->
@@ -10,11 +10,11 @@
                  contribution="XML"/> <!-- Anthonny -->
 </contributors>
 <teams>
-    <team id="blue" 
-          color="blue" 
+    <team id="blue"
+          color="blue"
           max="14" max-overfill="16">Blue</team>
-    <team id="red" 
-          color="dark red" 
+    <team id="red"
+          color="dark red"
           max="14" max-overfill="16">Red</team>
 </teams>
 <spawns>
@@ -189,12 +189,12 @@
     <item>trap door</item>
     <item>glowstone dust</item>
     <item>cobble wall</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
 </itemremove>
 <toolrepair>
     <tool>iron sword</tool>
     <tool>bow</tool>
     <tool>iron pickaxe</tool>
-    <tool>leather chestplate</tool>
-    <tool>leather boots</tool>
 </toolrepair>
 </map>

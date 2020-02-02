@@ -56,72 +56,64 @@
     </class>
 </classes>
 <filters>
-    <filter id="only-red">
-        <team>red</team>
-    </filter>
-    <filter id="only-blue">
-        <team>blue</team>
-    </filter>
-    <filter id="no-tnt">
-        <deny>
-            <block>tnt</block>
-        </deny>
-    </filter>
-    <filter id="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
-        <deny>
-            <block>iron block</block>
-            <block damage="5">step</block>
-            <block>redstone wire</block>
-            <block>wall sign</block>
-            <block>stone plate</block>
-            <block>smooth brick</block>
-            <block>iron fence</block>
-            <block>smooth stairs</block>
-            <block>wood button</block>
-        </deny>
-    </filter>
+    <team id="only-red">red</team>
+    <team id="only-blue">blue</team>
+    <not id="no-tnt">
+        <block>tnt</block>
+    </not>
+    <not id="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
+        <block>iron block</block>
+        <block damage="5">step</block>
+        <block>redstone wire</block>
+        <block>wall sign</block>
+        <block>stone plate</block>
+        <block>smooth brick</block>
+        <block>iron fence</block>
+        <block>smooth stairs</block>
+        <block>wood button</block>
+    </not>
 </filters>
 <regions>
     <!--Playing Field Regions-->
-    <union name="bases">
-        <rectangle name="red-base" min="60,-17" max="76,18"/>
-        <rectangle name="blue-base" min="-61,18" max="-77,-17"/>
+    <union id="bases">
+        <rectangle id="red-base" min="60,-17" max="76,18"/>
+        <rectangle id="blue-base" min="-61,18" max="-77,-17"/>
     </union>
-    <union name="sides">
-        <rectangle name="red-side-right" min="59,-11" max="44,-17"/>
-        <rectangle name="red-side-left" min="59,12" max="44,18"/>
-        <rectangle name="blue-side-left" min="-60,12" max="-45,18"/>
-        <rectangle name="blue-side-right" min="-60,-11" max="-45,-17"/>
+    <union id="sides">
+        <rectangle id="red-side-right" min="59,-11" max="44,-17"/>
+        <rectangle id="red-side-left" min="59,12" max="44,18"/>
+        <rectangle id="blue-side-left" min="-60,12" max="-45,18"/>
+        <rectangle id="blue-side-right" min="-60,-11" max="-45,-17"/>
     </union>
-    <union name="playable">
-        <rectangle name="main-area" min="59,-10" max="-60,11"/>
+    <union id="playable">
+        <rectangle id="main-area" min="59,-10" max="-60,11"/>
         <region id="bases"/>
         <region id="sides"/>
     </union>
-    <union name="cannons">
-        <cuboid name="red-cannon1" min="68,75,-5" max="65,77,-5"/>
-        <cuboid name="red-cannon2" min="71,75,0" max="63,76,1"/>
-        <cuboid name="red-cannon3" min="68,75,6" max="65,77,6"/>
-        <cuboid name="blue-cannon1" min="-69,75,6" max="-66,77,6"/>
-        <cuboid name="blue-cannon2" min="-72,75,1" max="-64,76,0"/>
-        <cuboid name="blue-cannon3" min="-69,75,-5" max="-66,77,-5"/>
+    <union id="cannons">
+        <cuboid id="red-cannon1" min="68,75,-5" max="65,77,-5"/>
+        <cuboid id="red-cannon2" min="71,75,0" max="63,76,1"/>
+        <cuboid id="red-cannon3" min="68,75,6" max="65,77,6"/>
+        <cuboid id="blue-cannon1" min="-69,75,6" max="-66,77,6"/>
+        <cuboid id="blue-cannon2" min="-72,75,1" max="-64,76,0"/>
+        <cuboid id="blue-cannon3" min="-69,75,-5" max="-66,77,-5"/>
     </union>
-    <apply block="deny-all">
-        <negative name="playable-inverse">
+    <apply block="never">
+        <negative id="playable-inverse">
             <region id="playable"/>
         </negative>
     </apply>
     <apply enter="only-red">
-        <rectangle name="red-home" min="60,-17" max="76,18"/>
-        <rectangle name="red-home-side-right" min="59,-11" max="44,-17"/>
-        <rectangle name="red-home-side-left" min="59,12" max="44,18"/>
+        <rectangle id="red-home" min="60,-17" max="76,18"/>
+        <rectangle id="red-home-side-right" min="59,-11" max="44,-17"/>
+        <rectangle id="red-home-side-left" min="59,12" max="44,18"/>
     </apply>
     <apply enter="only-blue">
-        <rectangle name="blue-home" min="-61,18" max="-77,-17"/>
-        <rectangle name="blue-home-side-left" min="-60,12" max="-45,18"/>
-        <rectangle name="blue-home-side-right" min="-60,-11" max="-45,-17"/>
+        <rectangle id="blue-home" min="-61,18" max="-77,-17"/>
+        <rectangle id="blue-home-side-left" min="-60,12" max="-45,18"/>
+        <rectangle id="blue-home-side-right" min="-60,-11" max="-45,-17"/>
     </apply>
-    <apply block="deny-all">
+    <apply block="never">
         <region id="blue-home"/>
         <region id="red-home"/>
     </apply>

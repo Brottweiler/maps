@@ -50,9 +50,9 @@
         <item slot="6" amount="40" material="red sandstone"/>
         <item slot="7" amount="16" damage="3" material="log"/>
         <item slot="17" amount="64" material="arrow"/>
-        <potion amplifier="100" duration="15">heal</potion>
-        <potion amplifier="100" duration="15">damage resistance</potion>
-        <potion amplifier="100" duration="15">regeneration</potion>
+        <potion amplifier="100" duration="8">heal</potion>
+        <potion amplifier="100" duration="8">damage resistance</potion>
+        <potion amplifier="100" duration="8">regeneration</potion>
     </kit>
     <kit id="green-kit" parents="spawn">
         <helmet color="667F33" material="leather helmet"/>

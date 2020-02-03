@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.0.0">
 <name>Glacial Impact 2</name>
-<version>1.1.3</version>
+<version>1.1.4</version>
 <objective>Destroy the enemy team's monuments while defending your own.</objective>
 <authors>
     <author uuid="19388047-f04b-43ac-9546-22aa69aea75c"/> <!-- bleangamer -->
@@ -93,7 +93,7 @@
         <item slot="5" amount="64">ladder</item>
         <item slot="6" amount="1" damage="32722">potion</item> <!-- Splash potion of speed 6 min -->
         <item slot="7" amount="2" damage="16373">potion</item> <!-- Bottle potion of health II -->
-        <item slot="8" amount="7">pumpkin pie</item>
+        <item slot="8" amount="32">cooked beef</item>
         <helmet>leather helmet</helmet>
         <chestplate>leather chestplate</chestplate>
         <leggings>leather leggings</leggings>
@@ -174,7 +174,7 @@
     <tool>iron axe</tool>
 </toolrepair>
 <itemremove>
-    <item>pumpkin pie</item>
+    <item>cooked beef</item>
     <item>iron boots</item>
     <item>wood</item>
     <item>log</item>

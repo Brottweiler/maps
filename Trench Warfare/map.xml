@@ -28,17 +28,17 @@
 <spawns> <!-- Not changed yet -->
     <spawn team="blues">
         <regions yaw="0">
-            <cylinder base="-64, 65, 1" radius="2.5" height="1"/>
+            <cuboid min="-62, 65, -1" max="-65, 65, 3"/>
         </regions>
     </spawn>
     <spawn team="reds">
         <regions yaw="180">
-            <cylinder base="64, 65, 1" radius="2.5" height="1"/>
+            <cuboid min="62, 65, 1" max="65, 65, -3"/>
         </regions>
     </spawn>
     <default>
         <regions yaw="0">
-            <cylinder base="0, 91, -60" radius="3.5" height="1"/>
+            <cylinder base="0, 91, -60" radius="3" height="1"/>
         </regions>
     </default>
 </spawns>

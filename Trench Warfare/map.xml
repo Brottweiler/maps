@@ -28,17 +28,17 @@
 <spawns> <!-- Not changed yet -->
     <spawn team="blues">
         <regions yaw="0">
-            <cylinder base="0.5, 20, -70.5" radius="2.5" height="1"/>
+            <cylinder base="-64, 65, 1" radius="2.5" height="1"/>
         </regions>
     </spawn>
     <spawn team="reds">
         <regions yaw="180">
-            <cylinder base="0.5, 20, 70.5" radius="2.5" height="1"/>
+            <cylinder base="64, 65, 1" radius="2.5" height="1"/>
         </regions>
     </spawn>
     <default>
         <regions yaw="0">
-            <cylinder base="0.5, 8, 0.5" radius="10.5" height="1"/>
+            <cylinder base="0, 91, -60" radius="3.5" height="1"/>
         </regions>
     </default>
 </spawns>
@@ -56,21 +56,23 @@
     </class>
 </classes>
 <filters>
-    <team id="only-red">red</team>
-    <team id="only-blue">blue</team>
+    <team id="only-red">reds</team>
+    <team id="only-blue">blues</team>
     <not id="no-tnt">
-        <block>tnt</block>
+        <material>tnt</material>
     </not>
     <not id="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
-        <block>iron block</block>
-        <block damage="5">step</block>
-        <block>redstone wire</block>
-        <block>wall sign</block>
-        <block>stone plate</block>
-        <block>smooth brick</block>
-        <block>iron fence</block>
-        <block>smooth stairs</block>
-        <block>wood button</block>
+        <any>
+            <material>iron block</material>
+            <material damage="5">step</material>
+            <material>redstone wire</material>
+            <material>wall sign</material>
+            <material>stone plate</material>
+            <material>smooth brick</material>
+            <material>iron fence</material>
+            <material>smooth stairs</material>
+            <material>wood button</material>
+        </any>
     </not>
 </filters>
 <regions>
@@ -124,7 +126,7 @@
             <region id="blue-home"/>
         </complement>
     </apply>
-    <apply block="allow-all">
+    <apply block="always">
         <region id="cannons"/>
     </apply>
 </regions>

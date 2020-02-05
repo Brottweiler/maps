@@ -27,12 +27,12 @@
 </teams>
 <spawns> <!-- Not changed yet -->
     <spawn team="blues">
-        <regions yaw="0">
+        <regions yaw="90">
             <cuboid min="-62, 65, -1" max="-65, 65, 3"/>
         </regions>
     </spawn>
     <spawn team="reds">
-        <regions yaw="180">
+        <regions yaw="-90">
             <cuboid min="62, 65, 1" max="65, 65, -3"/>
         </regions>
     </spawn>
@@ -58,9 +58,9 @@
 <filters>
     <team id="only-red">reds</team>
     <team id="only-blue">blues</team>
-    <not id="no-tnt">
+    <any id="only-tnt">
         <material>tnt</material>
-    </not>
+    </any>
     <not id="break-restrictions"> <!--Deny breaking stone brick and iron objects-->
         <any>
             <material>iron block</material>
@@ -76,59 +76,40 @@
     </not>
 </filters>
 <regions>
-    <!--Playing Field Regions-->
-    <union id="bases">
-        <rectangle id="red-base" min="60,-17" max="76,18"/>
-        <rectangle id="blue-base" min="-61,18" max="-77,-17"/>
-    </union>
-    <union id="sides">
-        <rectangle id="red-side-right" min="59,-11" max="44,-17"/>
-        <rectangle id="red-side-left" min="59,12" max="44,18"/>
-        <rectangle id="blue-side-left" min="-60,12" max="-45,18"/>
-        <rectangle id="blue-side-right" min="-60,-11" max="-45,-17"/>
-    </union>
-    <union id="playable">
-        <rectangle id="main-area" min="59,-10" max="-60,11"/>
-        <region id="bases"/>
-        <region id="sides"/>
-    </union>
+    <negative id="playable-inverse">
+        <union id="playable">
+            <rectangle id="main-area" min="59,-10" max="-60,11"/>
+            <union id="bases">
+                <union id="red-base-area">
+                    <rectangle id="red-base" min="60,-17" max="76,18"/>
+                    <rectangle id="red-side-right" min="59,-11" max="44,-17"/>
+                    <rectangle id="red-side-left" min="59,12" max="44,18"/>
+                </union>
+                <union id="blue-base-area">
+                    <rectangle id="blue-base" min="-61,18" max="-77,-17"/>
+                    <rectangle id="blue-side-left" min="-60,12" max="-45,18"/>
+                    <rectangle id="blue-side-right" min="-60,-11" max="-45,-17"/>
+                </union>
+            </union>
+        </union>
+    </negative>
     <union id="cannons">
-        <cuboid id="red-cannon1" min="68,75,-5" max="65,77,-5"/>
-        <cuboid id="red-cannon2" min="71,75,0" max="63,76,1"/>
-        <cuboid id="red-cannon3" min="68,75,6" max="65,77,6"/>
-        <cuboid id="blue-cannon1" min="-69,75,6" max="-66,77,6"/>
-        <cuboid id="blue-cannon2" min="-72,75,1" max="-64,76,0"/>
-        <cuboid id="blue-cannon3" min="-69,75,-5" max="-66,77,-5"/>
+            <!-- Fixed -->
+        <cuboid id="red-cannon1" min="69,74,6" max="64,78,7"/>
+            <!-- Needs to be tweaked -->
+        <cuboid id="red-cannon2" min="73,74,3" max="63,78,-1"/>
+        <cuboid id="red-cannon3" min="71,74,-3" max="65,78,-6"/>
+            <!-- Not fixed yet -->
+        <cuboid id="blue-cannon1" min="-71,74,-8" max="-65,78,-5"/>
+        <cuboid id="blue-cannon2" min="-73,74,-3" max="-63,78,1"/>
+        <cuboid id="blue-cannon3" min="-71,74,3" max="-65,78,6"/>
     </union>
-    <apply block="never">
-        <negative id="playable-inverse">
-            <region id="playable"/>
-        </negative>
-    </apply>
-    <apply enter="only-red">
-        <rectangle id="red-home" min="60,-17" max="76,18"/>
-        <rectangle id="red-home-side-right" min="59,-11" max="44,-17"/>
-        <rectangle id="red-home-side-left" min="59,12" max="44,18"/>
-    </apply>
-    <apply enter="only-blue">
-        <rectangle id="blue-home" min="-61,18" max="-77,-17"/>
-        <rectangle id="blue-home-side-left" min="-60,12" max="-45,18"/>
-        <rectangle id="blue-home-side-right" min="-60,-11" max="-45,-17"/>
-    </apply>
-    <apply block="never">
-        <region id="blue-home"/>
-        <region id="red-home"/>
-    </apply>
-    <apply block-break="break-restrictions" block="no-tnt">
-        <complement>
-            <region id="playable"/>
-            <region id="red-home"/>
-            <region id="blue-home"/>
-        </complement>
-    </apply>
-    <apply block="always">
-        <region id="cannons"/>
-    </apply>
+    <apply enter="only-red" region="red-base-area" message="Only red can enter this area"/>
+    <apply enter="only-blue" region="blue-base-area" message="Only blue can enter this area"/>
+    <apply block="only-tnt" region="cannons"/>
+    <apply block="never" region="bases"/>
+    <apply block="break-restrictions" region="main-area"/>
+    <apply block="never" region="playable-inverse"/>
 </regions>
 <tnt>
     <blockdamage>off</blockdamage>

@@ -119,10 +119,10 @@
             <region name="dyes"/>
         </negative>
     </apply>
-</regions><!-- Disable until fixed
+</regions>
 <modifybowprojectile>
     <projectile>Snowball</projectile>
-</modifybowprojectile>-->
+</modifybowprojectile>
 <tutorial>
     <stage title="Capture the Wool">
         <message>

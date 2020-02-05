@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>Hyperspace</name>
-<version>1.0</version>
+<version>1.1</version>
 <objective>Destroy the other team's monument</objective>
 <authors>
     <author uuid="df5fd9f4-4840-4293-9346-5c77bf7bc08f"/> <!-- kalikakitty -->
@@ -14,11 +14,24 @@
     <team color="dark green" max="24">Green</team>
     <team color="blue" max="24">Blue</team>
 </teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="64">log</item>
+        <item slot="5" amount="64">stone</item>
+        <item slot="6" amount="64">baked potato</item>
+        <item slot="7">bucket</item>
+        <item slot="8" amount="64">arrow</item>
+    </kit>
+</kits>
 <spawns>
-    <spawn team="blue" yaw="90">
+    <spawn team="blue" kit="spawn" yaw="90">
         <point>79.5,42,-17.5</point>
     </spawn>
-    <spawn team="green" yaw="90">
+    <spawn team="green" kit="spawn" yaw="90">
         <point>79.5,42,-77.5</point>
     </spawn>
     <default yaw="-90">
@@ -63,12 +76,27 @@
         <region name="above-75"/>
     </apply>
 </regions>
+<killreward>
+    <item amount="16">arrow</item>
+</killreward>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
 <itemremove>
     <item>carpet</item>
     <item>stained clay</item>
     <item>gold block</item>
     <item>step</item>
     <item>glowstone dust</item>
+    <item>log</item>
+    <item>wood</item>
+    <item>stone</item>
+    <item>baked potato</item>
+    <item>bucket</item>
+    <item>arrow</item>
 </itemremove>
 <timelock>on</timelock>
 </map>

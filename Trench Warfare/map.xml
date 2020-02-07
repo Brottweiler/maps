@@ -72,6 +72,7 @@
             <material>iron fence</material>
             <material>smooth stairs</material>
             <material>wood button</material>
+            <material>tnt</material>
         </any>
     </not>
 </filters>

@@ -91,7 +91,7 @@
             <boots material="chainmail boots" enchantment="fire_protection:3"/>
         </kit>
     </class>
-    <class name="Assassin" description="Able to move quickly, high damage, but low armor." icon="gold helmet">
+    <class name="Assassin" description="Able to move quickly, high damage, but low armor." icon="diamond sword">
         <kit>
             <item slot="0" enchantment="sharpness">iron sword</item>
             <item slot="1" enchantment="sharpness:10" damage="1651">diamond sword</item>
@@ -115,7 +115,7 @@
     </class>
 
     <!-- Defensive classes -->
-    <class name="Heavy" description="A class with good armor and deals high damage but slow." icon="diamond sword">
+    <class name="Heavy" description="A class with good armor and deals high damage but slow movement speed." icon="diamond helmet">
         <kit>
             <item slot="0">diamond sword</item>
             <item slot="1" amount="5">grilled pork</item>
@@ -139,7 +139,7 @@
             <boots material="chainmail boots"/>
         </kit>
     </class>
-    <class name="Commander" description="Able to raise the strength and protection of other units." icon="golden apple">
+    <class name="Commander" description="Able to raise the strength and protection of other units." icon="blaze powder">
         <kit>
             <item slot="0">iron sword</item>
             <item slot="1" damage="16393" amount="10">potion</item>
@@ -163,7 +163,7 @@
             <boots material="leather boots"/>
         </kit>
     </class>
-    <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="speckled melon">
+    <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="golden apple">
         <kit>
             <item slot="0">stone sword</item>
             <item slot="1" damage="16389" amount="-1">potion</item> <!-- in a perfect world this should be infinite use -->
@@ -245,18 +245,18 @@
     <apply block="break-restrictions" region="main-area"/>
     <apply block="never" region="playable-inverse"/>
 </regions>
-<control-points capture-players="lead" incremental="true" show-progress="true" points="0">
-    <control-point name="East" capture-time="20s">
+<control-points incremental="true" show-progress="true" points="0">
+    <control-point name="East Trench" capture-time="20s">
         <capture><cuboid min="22,62,-7" max="26,69,9"/></capture>
         <progress><cuboid min="21,67,-7" max="27,68,9"/></progress>
         <captured><cuboid min="22,62,-7" max="26,69,9"/></captured>
     </control-point>
-    <control-point name="Middle" capture-time="30s">
+    <control-point name="Middle Trench" capture-time="30s">
         <capture><cuboid min="-2,62,-7" max="2,69,9"/></capture>
         <progress><cuboid min="-3,66,-7" max="3,67,9"/></progress>
         <captured><cuboid min="-2,62,-7" max="2,69,9"/></captured>
     </control-point>
-    <control-point name="West" capture-time="20s">
+    <control-point name="West Trench" capture-time="20s">
         <capture><cuboid min="-26,62,-7" max="-22,69,9"/></capture>
         <progress><cuboid min="-27,67,-7" max="-21,68,9"/></progress>
         <captured><cuboid min="-26,62,-7" max="-22,69,9"/></captured>

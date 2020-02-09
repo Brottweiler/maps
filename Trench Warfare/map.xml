@@ -2,12 +2,15 @@
 <map proto="1.4.0">
 <name>Trench Warfare</name>
 <version>0.1</version>
-<objective>Be the team with the least amount of deaths after 10 minutes.</objective>
+<objective>Capture all trenches, or be the team with most kills after 10 minutes.</objective>
 <authors>
     <author uuid="1379cb6e-f291-4498-9807-e636f9674ac0"/> <!-- SH4D0W_HAWK -->
+    <author uuid="bff5b4ac-6d79-4a6e-be23-1ddcf1818036"/> <!-- Iced_Pineapple -->
+    <author uuid="ef4ea031-998f-4ec9-b7b6-1bdd428bcef8"/> <!-- Plastix -->
 </authors>
 <contributors>
     <contributor uuid="6968cbde-c2b7-479c-a8da-f33f109f013b" contribution="XML"/> <!-- Brottweiler -->
+    <contributor uuid="a9f11454-beac-4cc3-a138-1780802c8794" contribution="XML Assistance"/> <!-- Crazy_ -->
 </contributors>
 <score>
     <kills>1</kills>
@@ -17,9 +20,9 @@
 <rules>
     <rule>Switching/exchanging classses or items within a class is illegal.</rule>
 </rules>
-<hunger>
+<!--<hunger>
     <depletion>off</depletion>
-</hunger>
+</hunger>-->
 <timelock>on</timelock>
 <teams>
     <team id="blues" color="blue" max="20" show-name-tags="allies">Blue</team>
@@ -42,7 +45,8 @@
         </regions>
     </default>
 </spawns>
-<classes family="offensive">
+<classes family="classes">
+    <!--- Offensive classes -->
     <class name="Soldier" default="true" description="Basic infantry equipped with medium armor and weapon." icon="iron sword">
         <kit>
             <item slot="0">iron sword</item>
@@ -52,6 +56,137 @@
             <chestplate material="iron chestplate"/>
             <leggings material="iron leggings"/>
             <boots material="iron boots"/>
+        </kit>
+    </class>
+    <class name="Demoman" description="Specializes in high explosive materials." icon="sulphur">
+        <kit>
+            <item slot="0">stone sword</item>
+            <item slot="1" amount="8">tnt</item>
+            <item slot="3" damage="16396" amount="5">potion</item> splash potion of harming -->
+            <item slot="8" amount="5">grilled pork</item>
+            <helmet material="iron helmet" enchantment="blast_protection"/>
+            <chestplate material="iron chestplate" enchantment="blast_protection"/>
+            <leggings material="iron leggings" enchantment="blast_protection"/>
+            <boots material="iron boots" enchantment="blast_protection"/>
+        </kit>
+    </class>
+    <class name="Scout" description="A class good for a quick trench capture." icon="feather">
+        <kit>
+            <item slot="0" enchantment="knockback">wood sword</item>
+            <item slot="1" enchantment="efficiency">stone axe</item>
+            <item slot="8" amount="5">grilled pork</item>
+            <chestplate material="iron chestplate"/>
+            <leggings material="leather leggings"/>
+            <effect duration="oo" amplifier="2">speed</effect>
+        </kit>
+    </class>
+    <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
+        <kit>
+            <item slot="0" enchantment="fire aspect:2">stone sword</item>
+            <item slot="1" damage="55">flint and steel</item>
+            <item slot="2" amount="5">grilled pork</item>
+            <helmet material="chainmail helmet" enchantment="fire_protection:3"/>
+            <chestplate material="chainmail chestplate" enchantment="fire_protection:3"/>
+            <leggings material="chainmail leggings" enchantment="fire_protection:3"/>
+            <boots material="chainmail boots" enchantment="fire_protection:3"/>
+        </kit>
+    </class>
+    <class name="Assassin" description="Able to move quickly, high damage, but low armor." icon="gold helmet">
+        <kit>
+            <item slot="0" enchantment="sharpness">iron sword</item>
+            <item slot="1" enchantment="sharpness:10" damage="1651">diamond sword</item>
+            <item slot="2" amount="5">grilled pork</item>
+            <helmet material="gold helmet"/>
+            <boots material="leather boots"/>
+            <effect duration="oo">speed</effect>
+        </kit>
+    </class>
+    <class name="Spy" description="Able to turn invisible for 10 seconds!" icon="watch">
+        <kit>
+            <item slot="0" enchantment="sharpness:2">iron sword</item>
+            <item slot="1" amount="2">watch</item>
+            <item slot="2" amount="5">grilled pork</item>
+            <helmet material="iron helmet"/>
+            <chestplate material="leather chestplate"/>
+            <leggings material="gold leggings"/>
+            <boots material="chainmail boots"/>
+            <effect duration="oo" amplifier="2">speed</effect>
+        </kit>
+    </class>
+
+    <!-- Defensive classes -->
+    <class name="Heavy" description="A class with good armor and deals high damage but slow." icon="diamond sword">
+        <kit>
+            <item slot="0">diamond sword</item>
+            <item slot="1" amount="5">grilled pork</item>
+            <helmet material="diamond helmet" enchantment="protection"/>
+            <chestplate material="diamond chestplate" enchantment="protection"/>
+            <leggings material="diamond leggings" enchantment="protection"/>
+            <boots material="diamond boots" enchantment="protection"/>
+            <effect duration="oo">slowness</effect>
+        </kit>
+    </class>
+    <class name="Engineer" description="Can create defenses on the map to provide cover." icon="wood">
+        <kit>
+            <item slot="0">iron axe</item>
+            <item slot="1">shears</item>
+            <item slot="2" amount="32">wood</item>
+            <item slot="3" amount="16">web</item>
+            <item slot="4" amount="5">grilled pork</item>
+            <helmet material="chainmail helmet"/>
+            <chestplate material="iron chestplate"/>
+            <leggings material="iron leggings"/>
+            <boots material="chainmail boots"/>
+        </kit>
+    </class>
+    <class name="Commander" description="Able to raise the strength and protection of other units." icon="golden apple">
+        <kit>
+            <item slot="0">iron sword</item>
+            <item slot="1" damage="16393" amount="10">potion</item>
+            <item slot="2" damage="16387" amount="10">potion</item>
+            <item slot="3" amount="5">grilled pork</item>
+            <helmet material="gold helmet"/>
+            <chestplate material="diamond chestplate"/>
+            <leggings material="gold leggings"/>
+            <boots material="gold boots"/>
+        </kit>
+    </class>
+    <class name="Sniper" description="A unit equiped with a bow but has low armor." icon="bow">
+        <kit>
+            <item slot="0">stone sword</item>
+            <item slot="1" enchantment="infinity;punch:2;power:2">bow</item>
+            <item slot="2" amount="5">grilled pork</item>
+            <item slot="28">arrow</item>
+            <helmet material="chainmail helmet"/>
+            <chestplate material="leather chestplate"/>
+            <leggings material="leather leggings"/>
+            <boots material="leather boots"/>
+        </kit>
+    </class>
+    <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="speckled melon">
+        <kit>
+            <item slot="0">stone sword</item>
+            <item slot="1" damage="16389" amount="-1">potion</item> <!-- in a perfect world this should be infinite use -->
+            <item slot="2" amount="5">grilled pork</item>
+            <helmet material="gold helmet"/>
+            <chestplate material="gold chestplate"/>
+            <leggings material="gold leggings"/>
+            <boots material="gold boots"/>
+        </kit>
+    </class>
+    <class name="Cannoner" description="Equiped with TNT to use with the cannons on the map." icon="tnt">
+        <kit>
+            <item slot="0">stone sword</item>
+            <item slot="1" amount="64">tnt</item>
+            <item slot="2" amount="64">tnt</item>
+            <item slot="3" amount="64">tnt</item>
+            <item slot="4" amount="64">tnt</item>
+            <item slot="5" amount="6">sulphur</item>
+            <item slot="6" amount="5">grilled pork</item>
+            <helmet material="chainmail helmet" enchantment="blast_protection:4"/>
+            <chestplate material="chainmail chestplate" enchantment="blast_protection:4"/>
+            <leggings material="chainmail leggings" enchantment="blast_protection:4"/>
+            <boots material="chainmail boots" enchantment="blast_protection:4"/>
         </kit>
     </class>
 </classes>
@@ -73,6 +208,7 @@
             <material>smooth stairs</material>
             <material>wood button</material>
             <material>tnt</material>
+            <material>wool</material>
         </any>
     </not>
 </filters>
@@ -95,15 +231,12 @@
         </union>
     </negative>
     <union id="cannons">
-            <!-- Fixed -->
-        <cuboid id="red-cannon1" min="69,74,6" max="64,78,7"/>
-            <!-- Needs to be tweaked -->
-        <cuboid id="red-cannon2" min="73,74,3" max="63,78,-1"/>
-        <cuboid id="red-cannon3" min="71,74,-3" max="65,78,-6"/>
-            <!-- Not fixed yet -->
-        <cuboid id="blue-cannon1" min="-71,74,-8" max="-65,78,-5"/>
-        <cuboid id="blue-cannon2" min="-73,74,-3" max="-63,78,1"/>
-        <cuboid id="blue-cannon3" min="-71,74,3" max="-65,78,6"/>
+        <cuboid id="red-cannon1" min="69,74,6" max="65,78,7"/>
+        <cuboid id="red-cannon2" min="72,74,-0" max="63,77,2"/>
+        <cuboid id="red-cannon3" min="69,74,-4" max="65,78,-5"/>
+        <cuboid id="blue-cannon1" min="-69,74,-5" max="-65,78,-4"/>
+        <cuboid id="blue-cannon2" min="-72,74,2" max="-63,77,0"/>
+        <cuboid id="blue-cannon3" min="-69,74,6" max="-65,78,7"/>
     </union>
     <apply enter="only-red" region="red-base-area" message="Only red can enter this area"/>
     <apply enter="only-blue" region="blue-base-area" message="Only blue can enter this area"/>
@@ -112,6 +245,23 @@
     <apply block="break-restrictions" region="main-area"/>
     <apply block="never" region="playable-inverse"/>
 </regions>
+<control-points capture-players="lead" incremental="true" show-progress="true" points="0">
+    <control-point name="East" capture-time="20s">
+        <capture><cuboid min="22,62,-7" max="26,69,9"/></capture>
+        <progress><cuboid min="21,67,-7" max="27,68,9"/></progress>
+        <captured><cuboid min="22,62,-7" max="26,69,9"/></captured>
+    </control-point>
+    <control-point name="Middle" capture-time="30s">
+        <capture><cuboid min="-2,62,-7" max="2,69,9"/></capture>
+        <progress><cuboid min="-3,66,-7" max="3,67,9"/></progress>
+        <captured><cuboid min="-2,62,-7" max="2,69,9"/></captured>
+    </control-point>
+    <control-point name="West" capture-time="20s">
+        <capture><cuboid min="-26,62,-7" max="-22,69,9"/></capture>
+        <progress><cuboid min="-27,67,-7" max="-21,68,9"/></progress>
+        <captured><cuboid min="-26,62,-7" max="-22,69,9"/></captured>
+    </control-point>
+</control-points>
 <tnt>
     <blockdamage>off</blockdamage>
 </tnt>
@@ -122,12 +272,22 @@
     <item>leather leggings</item>
     <item>leather boots</item>
     <item>gold helmet</item>
+    <item>gold chestplate</item>
+    <item>gold leggings</item>
+    <item>gold boots</item>
+    <item>chainmail helmet</item>
+    <item>chainmail chestplate</item>
     <item>chainmail leggings</item>
+    <item>chainmail boots</item>
     <item>iron helmet</item>
     <item>iron chestplate</item>
     <item>iron leggings</item>
     <item>iron boots</item>
+    <item>diamond helmet</item>
     <item>diamond chestplate</item>
+    <item>diamond leggings</item>
+    <item>diamond boots</item>
+    <item>wood sword</item>
     <item>stone sword</item>
     <item>iron sword</item>
     <item>diamond sword</item>
@@ -156,6 +316,10 @@
     <item>gravel</item>
     <item>flint</item>
     <item>soul sand</item>
+    <item>grilled pork</item>
+    <item>egg</item>
+    <item>sulphur</item>
+    <item>watch</item>
 </itemremove>
 <killreward>
     <item name="Health Kit">golden apple</item>

@@ -24,9 +24,13 @@
     <depletion>off</depletion>
 </hunger>
 <timelock>on</timelock>
-<maxbuildheight>75</maxbuildheight>
+<maxbuildheight>80</maxbuildheight>
+<gamerules>
+    <doFireTick>false</doFireTick>
+</gamerules>
 <broadcasts>
     <tip every="2m" after="2s" count="oo">`3View classes with `b/classes`3 and select class with `b/class name</tip>
+    <tip every="2m" after="2s" count="oo" filter="only-cannoner">`3Use your `bTNT`3 in the `bcannons`3 above spawn!</tip>
 </broadcasts>
 <teams>
     <team id="blues" color="blue" max="20" show-name-tags="allies">Blue</team>
@@ -66,10 +70,10 @@
             <item slot="0" unbreakable="true">stone sword</item>
             <item slot="1" amount="8">tnt</item>
             <item slot="3" damage="16396" amount="5">potion</item> <!-- splash potion of harming -->
-            <helmet material="iron helmet" enchantment="blast_protection" unbreakable="true"/>
-            <chestplate material="iron chestplate" enchantment="blast_protection" unbreakable="true"/>
-            <leggings material="iron leggings" enchantment="blast_protection" unbreakable="true"/>
-            <boots material="iron boots" enchantment="blast_protection" unbreakable="true"/>
+            <helmet material="iron helmet" enchantment="blast_protection:4" unbreakable="true"/>
+            <chestplate material="iron chestplate" enchantment="blast_protection:4" unbreakable="true"/>
+            <leggings material="iron leggings" enchantment="blast_protection:4" unbreakable="true"/>
+            <boots material="iron boots" enchantment="blast_protection:4" unbreakable="true"/>
         </kit>
     </class>
     <class name="Scout" description="A class good for a quick trench capture." icon="feather">
@@ -100,10 +104,11 @@
             <effect duration="oo">speed</effect>
         </kit>
     </class>
-    <class name="Spy" description="Able to turn invisible for 10 seconds!" icon="watch">
+    <class name="Spy" description="Able to turn invisible!" icon="watch">
         <kit>
             <item slot="0" enchantment="sharpness:2" unbreakable="true">iron sword</item>
-            <item slot="1" amount="2">watch</item>
+            <item slot="1" damage="8238">potion</item>
+            <item slot="8" amount="1">watch</item>
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>
@@ -174,7 +179,7 @@
             <item slot="2" amount="64">tnt</item>
             <item slot="3" amount="64">tnt</item>
             <item slot="4" amount="64">tnt</item>
-            <item slot="5" amount="6">sulphur</item>
+            <item slot="5" name="Grenade" amount="6" grenade="true" grenade-power="1.5">snow ball</item>
             <helmet material="chainmail helmet" enchantment="blast_protection:4" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="blast_protection:4" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="blast_protection:4" unbreakable="true"/>
@@ -185,6 +190,9 @@
 <filters>
     <team id="only-red">reds</team>
     <team id="only-blue">blues</team>
+    <not id="no-tnt">
+        <material>tnt</material>
+    </not>
     <any id="only-tnt">
         <material>tnt</material>
     </any>
@@ -199,10 +207,14 @@
             <material>iron fence</material>
             <material>smooth stairs</material>
             <material>wood button</material>
-            <material>tnt</material>
             <material>wool</material>
+            <material>ladder</material>
+            <material>wood stairs</material>
         </any>
     </not>
+    <any id="only-cannoner">
+        <class>cannoner</class>
+    </any>
 </filters>
 <regions>
     <negative id="playable-inverse">
@@ -232,9 +244,10 @@
     </union>
     <apply enter="only-red" region="red-base-area" message="Only red can enter this area!"/>
     <apply enter="only-blue" region="blue-base-area" message="Only blue can enter this area!"/>
+    <apply block="no-tnt" region="main-area" message="You may only place TNT inside cannons!"/>
     <apply block="only-tnt" region="cannons"/>
     <apply block="never" region="bases" message="You cannot modify the base!"/>
-    <apply block="break-restrictions" region="main-area" message="You may not break or place this block!"/>
+    <apply block="break-restrictions" region="main-area" message="You may not break this block!"/>
     <apply block="never" region="playable-inverse"/>
 </regions>
 <control-points incremental="true" show-progress="true" required="false">

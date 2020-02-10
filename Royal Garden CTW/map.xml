@@ -1,6 +1,6 @@
 <map proto="1.3.2">
 <name>Royal Garden CTW</name>
-<version>1.5.1</version>
+<version>1.5.2</version>
 <objective>Capture the opposing team's wool and place it at your victory monument.</objective>
 <authors>
     <author uuid="621b2aa8-4e5f-4ed8-bd36-0ae2f8952a06"/> <!-- thestrangeboy1 -->
@@ -13,8 +13,8 @@
     <kit name="spawn">
         <item slot="0">iron sword</item>
         <item slot="1" enchantment="arrow infinite:1">bow</item>
-        <item slot="2" enchantment="dig speed:3;durability:3">iron pickaxe</item>
-        <item slot="3" enchantment="dig speed:2;durability:3">iron axe</item>
+        <item slot="2" enchantment="dig speed:2;durability:3">iron pickaxe</item>
+        <item slot="3" enchantment="dig speed:1;durability:3">iron axe</item>
         <item slot="4" amount="64" damage="2">wood</item>
         <item slot="5" amount="32">glass</item>
         <item slot="7">golden apple</item>
@@ -100,7 +100,7 @@
     <union name="red-spawn">
         <rectangle min="133,14" max="215,37"/>
         <rectangle min="215,59" max="150,-8"/>
-    </union>    
+    </union>
     <union name="blue-spawn">
         <rectangle min="-102,37" max="-183,14"/>
         <rectangle min="-184,-8" max="-119,59"/>
@@ -119,7 +119,7 @@
         <rectangle name="purple" min="80,-32" max="95,-45"/>
         <rectangle name="orange" min="80,96" max="95,83"/>
     </apply>
-    <apply enter="only-red" block="only-red-web" use="only-red-usage">														
+    <apply enter="only-red" block="only-red-web" use="only-red-usage">
         <rectangle name="pink" min="-64,96" max="-49,83"/>
         <rectangle name="yellow" min="-64,-32" max="-49,-45"/>
     </apply>

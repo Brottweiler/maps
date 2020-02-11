@@ -104,10 +104,14 @@
             <effect duration="oo">speed</effect>
         </kit>
     </class>
-    <class name="Spy" description="Able to turn invisible!" icon="watch">
+    <class name="Spy" description="Able to turn invisible for 10 seconds!" icon="watch">
         <kit>
             <item slot="0" enchantment="sharpness:2" unbreakable="true">iron sword</item>
-            <item slot="1" damage="8238">potion</item>
+                <!-- <item slot="1" damage="8238">potion</item> --> <!-- potion of invisibility -->
+            <!-- Give two potions because old kit had two clocks -->
+            <item slot="2" material="potion" amount="2">
+                <effect duration="10s">invisibility</effect>
+            </item>
             <item slot="8" amount="1">watch</item>
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
@@ -319,7 +323,6 @@
     <item>string</item>
     <item>golden apple</item>
     <item>gravel</item>
-    <item>flint</item>
     <item>soul sand</item>
     <item>egg</item>
     <item>sulphur</item>

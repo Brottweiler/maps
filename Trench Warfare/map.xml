@@ -68,7 +68,8 @@
     <class name="Demoman" description="Specializes in high explosive materials." icon="sulphur">
         <kit>
             <item slot="0" unbreakable="true">stone sword</item>
-            <item slot="1" amount="8">tnt</item>
+            <item slot="1" unbreakable="true">flint and steel</item>
+            <item slot="2" amount="8">tnt</item>
             <item slot="3" damage="16396" amount="5">potion</item> <!-- splash potion of harming -->
             <helmet material="iron helmet" enchantment="blast_protection:4" unbreakable="true"/>
             <chestplate material="iron chestplate" enchantment="blast_protection:4" unbreakable="true"/>
@@ -88,7 +89,7 @@
     <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
         <kit>
             <item slot="0" enchantment="fire aspect:2" unbreakable="true">stone sword</item>
-            <item slot="1" amount="9" name="Fireball">fireball</item>
+            <item slot="1" amount="10" name="Fireball">fireball</item>
             <helmet material="chainmail helmet" enchantment="fire_protection:3" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="fire_protection:3" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="fire_protection:3" unbreakable="true"/>

@@ -2,7 +2,7 @@
 <map proto="1.3.0">
 <include src="tutorial.xml"/>
 <name>Fort Wars</name>
-<version>1.1.4</version>
+<version>1.1.6</version>
 <objective>Destroy the enemy's flag!</objective>
 <authors>
     <author uuid="5bd4f5c6-f60c-44b1-9c37-c27a7db35ec6"/> <!-- whiskers434 -->
@@ -20,7 +20,7 @@
         <item slot="1">iron pickaxe</item>
         <item slot="2" amount="8">wood</item>
         <item slot="3" amount="16">apple</item>
-        <chestplate enchantment="protection:1">iron chestplate</chestplate>
+        <chestplate>iron chestplate</chestplate>
         <item slot="35" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
     </kit>
 </kits>
@@ -30,7 +30,6 @@
 </toolrepair>
 <itemremove>
     <item>shears</item>
-    <item>apple</item>
     <item>iron chestplate</item>
 </itemremove>
 <spawns>
@@ -146,5 +145,5 @@
             <point yaw="-90">-121.5,55,-152</point>
         </teleport>
     </stage>
-</tutorial>s
+</tutorial>
 </map>

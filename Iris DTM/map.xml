@@ -2,7 +2,7 @@
 <map proto="1.3.2">
 <include src="tutorial.xml"/>
 <name>Iris DTM</name>
-<version>1.3.2</version>
+<version>1.3.3</version>
 <objective>Break the enemy's obsidian monument in their base!</objective>
 <authors>
     <author uuid="3a549b18-08ed-4756-a78c-b34d29a4fd87"/> <!-- Torn_Ares -->
@@ -15,6 +15,8 @@
     <kit name="teams">
         <item slot="0" lore="`cRemember: `7This does the same damage as a stone sword!">diamond pickaxe</item>
         <item slot="1" name="`6TNT Defuser" lore="`7Right click to defuse teammate's TNT|`7Does not work in `9water`7!">shears</item>
+        <item slot="2" damage="2" amount="8">wood</item>
+        <item slot="3" amount="6">cooked fish</item>
     </kit>
 </kits>
 <spawns kit="teams">

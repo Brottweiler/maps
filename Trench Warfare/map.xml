@@ -194,9 +194,9 @@
 <filters>
     <team id="only-red">reds</team>
     <team id="only-blue">blues</team>
-    <not id="no-tnt">
+    <deny id="no-tnt">
         <material>tnt</material>
-    </not>
+    </deny>
     <any id="only-tnt">
         <material>tnt</material>
     </any>
@@ -249,9 +249,9 @@
     <apply enter="only-red" region="red-base-area" message="Only red can enter this area!"/>
     <apply enter="only-blue" region="blue-base-area" message="Only blue can enter this area!"/>
     <apply block="no-tnt" region="main-area" message="You may only place TNT inside cannons!"/>
-    <apply block="only-tnt" region="cannons"/>
     <apply block="never" region="bases" message="You cannot modify the base!"/>
     <apply block="break-restrictions" region="main-area" message="You may not break this block!"/>
+    <apply block="only-tnt" region="cannons"/>
     <apply block="never" region="playable-inverse"/>
 </regions>
 <control-points incremental="true" show-progress="true" required="false">

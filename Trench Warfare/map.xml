@@ -88,7 +88,7 @@
     <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
         <kit>
             <item slot="0" enchantment="fire aspect:2" unbreakable="true">stone sword</item>
-            <item slot="1" amount="9">fireball</item>
+            <item slot="1" amount="9" name="Fireball">fireball</item>
             <helmet material="chainmail helmet" enchantment="fire_protection:3" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="fire_protection:3" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="fire_protection:3" unbreakable="true"/>

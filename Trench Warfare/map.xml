@@ -88,7 +88,7 @@
     <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
         <kit>
             <item slot="0" enchantment="fire aspect:2" unbreakable="true">stone sword</item>
-            <item slot="1" damage="55">flint and steel</item>
+            <item slot="1" amount="9">fire charge</item>
             <helmet material="chainmail helmet" enchantment="fire_protection:3" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="fire_protection:3" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="fire_protection:3" unbreakable="true"/>
@@ -327,6 +327,7 @@
     <item>egg</item>
     <item>sulphur</item>
     <item>watch</item>
+    <item>fire carge</item>
 </itemremove>
 <killreward>
     <item name="Health Kit">golden apple</item>

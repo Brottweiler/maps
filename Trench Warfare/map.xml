@@ -154,7 +154,7 @@
             <boots material="chainmail boots" unbreakable="true"/>
         </kit>
     </class>
-    <class name="Commander" description="Able to raise the strength and protection of other units." icon="blaze powder">
+    <class name="Commander" description="Able to raise the strength and protection of other units." icon="compass">
         <kit>
             <item slot="0" unbreakable="true">iron sword</item>
             <item slot="1" damage="16393" amount="10">potion</item>

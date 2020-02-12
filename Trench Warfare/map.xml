@@ -63,8 +63,8 @@
     <!--- Offensive classes -->
     <class name="Soldier" default="true" description="Basic infantry equipped with medium armor and weapon." icon="iron sword">
         <kit>
-            <item slot="0" unbreakable="true">iron sword</item>
-            <item slot="1" amount="16">egg</item>
+            <item slot="0" unbreakable="true" material="iron sword"/>
+            <item slot="1" amount="16" material="egg"/>
             <helmet material="diamond helmet" unbreakable="true"/>
             <chestplate material="iron chestplate" unbreakable="true"/>
             <leggings material="iron leggings" unbreakable="true"/>
@@ -73,9 +73,9 @@
     </class>
     <class name="Demoman" description="Specializes in high explosive materials." icon="sulphur">
         <kit>
-            <item slot="0" unbreakable="true">stone sword</item>
+            <item slot="0" unbreakable="true" material="stone sword"/>
             <item projectile="gun" name="`aGrenade Launcher" material="stick"/>
-            <item slot="3" damage="16396" amount="5">potion</item> <!-- splash potion of harming -->
+            <item slot="3" damage="16396" amount="5" material="potion"/> <!-- splash potion of harming -->
             <helmet material="iron helmet" enchantment="blast_protection:4" unbreakable="true"/>
             <chestplate material="iron chestplate" enchantment="blast_protection:4" unbreakable="true"/>
             <leggings material="iron leggings" enchantment="blast_protection:4" unbreakable="true"/>
@@ -84,8 +84,8 @@
     </class>
     <class name="Scout" description="A class good for a quick trench capture." icon="feather">
         <kit>
-            <item slot="0" enchantment="knockback" unbreakable="true">wood sword</item>
-            <item slot="1" enchantment="efficiency" unbreakable="true">stone axe</item>
+            <item slot="0" enchantment="knockback" unbreakable="true" material="wood sword"/>
+            <item slot="1" enchantment="efficiency" unbreakable="true" material="stone axe"/>
             <chestplate material="iron chestplate" unbreakable="true"/>
             <leggings material="leather leggings" unbreakable="true"/>
             <effect duration="oo" amplifier="2">speed</effect>
@@ -93,8 +93,8 @@
     </class>
     <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
         <kit>
-            <item slot="0" enchantment="fire aspect:2" unbreakable="true">stone sword</item>
-            <item slot="1" damage="55">flint and steel</item>
+            <item slot="0" enchantment="fire aspect:2" unbreakable="true" material="stone sword"/>
+            <item slot="1" damage="55" material="flint and steel"/>
             <helmet material="chainmail helmet" enchantment="fire_protection:3" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="fire_protection:3" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="fire_protection:3" unbreakable="true"/>
@@ -103,8 +103,8 @@
     </class>
     <class name="Assassin" description="Able to move quickly, high damage, but low armor." icon="diamond sword">
         <kit>
-            <item slot="0" enchantment="sharpness" unbreakable="true">iron sword</item>
-            <item slot="1" enchantment="sharpness:10" damage="1651">diamond sword</item>
+            <item slot="0" enchantment="sharpness" unbreakable="true" material="iron sword"/>
+            <item slot="1" enchantment="sharpness:10" damage="1651" material="diamond sword"/>
             <helmet material="gold helmet" unbreakable="true"/>
             <boots material="leather boots" unbreakable="true"/>
             <effect duration="oo">speed</effect>
@@ -112,7 +112,7 @@
     </class>
     <class name="Spy" description="Able to turn invisible for 10 seconds!" icon="watch">
         <kit>
-            <item slot="0" enchantment="sharpness:2" unbreakable="true">iron sword</item>
+            <item slot="0" enchantment="sharpness:2" unbreakable="true" material="iron sword"/>
                 <!-- <item slot="1" damage="8238">potion</item> --> <!-- potion of invisibility -->
             <!-- Give two potions because old kit had two clocks -->
             <item slot="2" material="potion" name="10 Seconds of Invisibility">
@@ -121,7 +121,7 @@
             <item slot="3" material="potion" name="10 Seconds of Invisibility">
                 <effect duration="10s">invisibility</effect>
             </item>
-            <item slot="8" amount="1">watch</item>
+            <item slot="8" amount="1" material="watch"/>
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>
@@ -133,7 +133,7 @@
     <!-- Defensive classes -->
     <class name="Heavy" description="A class with good armor and deals high damage but slow movement speed." icon="diamond helmet">
         <kit>
-            <item slot="0" enchantment="sharpness" unbreakable="true">diamond sword</item>
+            <item slot="0" enchantment="sharpness" unbreakable="true" material="diamond sword"/>
             <helmet material="diamond helmet" enchantment="protection" unbreakable="true"/>
             <chestplate material="diamond chestplate" enchantment="protection" unbreakable="true"/>
             <leggings material="diamond leggings" enchantment="protection" unbreakable="true"/>
@@ -143,10 +143,10 @@
     </class>
     <class name="Engineer" description="Can create defenses on the map to provide cover." icon="wood">
         <kit>
-            <item slot="0" unbreakable="true">iron axe</item>
-            <item slot="1" unbreakable="true">shears</item>
-            <item slot="2" amount="32">wood</item>
-            <item slot="3" amount="16">web</item>
+            <item slot="0" unbreakable="true" material="iron axe"/>
+            <item slot="1" unbreakable="true" material="shears"/>
+            <item slot="2" amount="32" material="wood"/>
+            <item slot="3" amount="16" material="web"/>
             <helmet material="chainmail helmet" unbreakable="true"/>
             <chestplate material="iron chestplate" unbreakable="true"/>
             <leggings material="iron leggings" unbreakable="true"/>
@@ -155,9 +155,9 @@
     </class>
     <class name="Commander" description="Able to raise the strength and protection of other units." icon="compass">
         <kit>
-            <item slot="0" unbreakable="true">iron sword</item>
-            <item slot="1" damage="16393" amount="10">potion</item>
-            <item slot="2" damage="16387" amount="10">potion</item>
+            <item slot="0" unbreakable="true" material="iron sword"/>
+            <item slot="1" damage="16393" amount="10" material="potion"/>
+            <item slot="2" damage="16387" amount="10" material="potion"/>
             <helmet material="gold helmet" unbreakable="true"/>
             <chestplate material="diamond chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>
@@ -166,9 +166,9 @@
     </class>
     <class name="Sniper" description="A unit equiped with a bow but has low armor." icon="bow">
         <kit>
-            <item slot="0" unbreakable="true">stone sword</item>
-            <item slot="1" enchantment="infinity;punch:2;power:2" unbreakable="true">bow</item>
-            <item slot="28">arrow</item>
+            <item slot="0" unbreakable="true" material="stone sword"/>
+            <item slot="1" enchantment="infinity;punch:2;power:2" unbreakable="true" material="bow"/>
+            <item slot="28" material="arrow"/>
             <helmet material="chainmail helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="leather leggings" unbreakable="true"/>
@@ -177,8 +177,8 @@
     </class>
     <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="golden apple">
         <kit>
-            <item slot="0" unbreakable="true">stone sword</item>
-            <item slot="1" damage="16389" amount="-1">potion</item> <!-- in a perfect world this should be infinite use -->
+            <item slot="0" unbreakable="true" material="stone sword"/>
+            <item slot="1" damage="16389" amount="-1" material="potion"/> <!-- in a perfect world this should be infinite use -->
             <helmet material="gold helmet" unbreakable="true"/>
             <chestplate material="gold chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>
@@ -187,12 +187,12 @@
     </class>
     <class name="Cannoneer" description="Equiped with TNT to use with the cannons on the map." icon="tnt">
         <kit>
-            <item slot="0" unbreakable="true">stone sword</item>
-            <item slot="1" amount="64">tnt</item>
-            <item slot="2" amount="64">tnt</item>
-            <item slot="3" amount="64">tnt</item>
-            <item slot="4" amount="64">tnt</item>
-            <item slot="5" name="Grenade" amount="6" grenade="true" grenade-power="1.5">snow ball</item>
+            <item slot="0" unbreakable="true" material="stone sword"/>
+            <item slot="1" amount="64" material="tnt"/>
+            <item slot="2" amount="64" material="tnt"/>
+            <item slot="3" amount="64" material="tnt"/>
+            <item slot="4" amount="64" material="tnt"/>
+            <item slot="5" name="Grenade" amount="6" grenade="true" grenade-power="1.5" material="snow ball"/>
             <helmet material="chainmail helmet" enchantment="blast_protection:4" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="blast_protection:4" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="blast_protection:4" unbreakable="true"/>

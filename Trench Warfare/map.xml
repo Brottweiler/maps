@@ -116,7 +116,10 @@
             <item slot="0" enchantment="sharpness:2" unbreakable="true">iron sword</item>
                 <!-- <item slot="1" damage="8238">potion</item> --> <!-- potion of invisibility -->
             <!-- Give two potions because old kit had two clocks -->
-            <item slot="2" material="potion" amount="2">
+            <item slot="2" material="potion" name="10 Seconds of Invisibility">
+                <effect duration="10s">invisibility</effect>
+            </item>
+            <item slot="3" material="potion" name="10 Seconds of Invisibility">
                 <effect duration="10s">invisibility</effect>
             </item>
             <item slot="8" amount="1">watch</item>

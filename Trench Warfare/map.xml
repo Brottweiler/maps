@@ -74,7 +74,7 @@
     <class name="Demoman" description="Specializes in high explosive materials." icon="sulphur">
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
-            <item projectile="gun" name="`aGrenade Launcher" material="stick"/>
+            <item projectile="gun" material="tnt" amount="8"/>
             <item slot="3" damage="16396" amount="5" material="potion"/> <!-- splash potion of harming -->
             <helmet material="iron helmet" enchantment="blast_protection:4" unbreakable="true"/>
             <chestplate material="iron chestplate" enchantment="blast_protection:4" unbreakable="true"/>
@@ -285,10 +285,10 @@
         id="gun"
         name="gun"
         projectile="TNTPrimed"
-        velocity="0.5"
+        velocity="0.3"
         damage="20"
-        throwable="false"
-        cooldown="10s"/>
+        throwable="true"
+        cooldown="5s"/>
 </projectiles>
 <tnt>
     <blockdamage>off</blockdamage>

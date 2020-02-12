@@ -288,7 +288,8 @@
         velocity="0.3"
         damage="20"
         throwable="true"
-        cooldown="5s"/>
+        cooldown="5s"
+        click="right"/>
 </projectiles>
 <tnt>
     <blockdamage>off</blockdamage>

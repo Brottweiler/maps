@@ -30,7 +30,7 @@
 </gamerules>
 <broadcasts>
     <tip every="2m" after="2s" count="oo">`3View classes with `b/classes`3 and select class with `b/class name</tip>
-    <tip every="2m" after="2s" count="oo" filter="only-cannoner">`3Use your `bTNT`3 in the `bcannons`3 above spawn!</tip>
+    <tip every="2m" after="2s" count="oo" filter="only-cannoneer">`3Use your `bTNT`3 in the `bcannons`3 above spawn!</tip>
 </broadcasts>
 <teams>
     <team id="blues" color="blue" max="20" show-name-tags="allies">Blue</team>
@@ -177,7 +177,7 @@
             <boots material="gold boots" unbreakable="true"/>
         </kit>
     </class>
-    <class name="Cannoner" description="Equiped with TNT to use with the cannons on the map." icon="tnt">
+    <class name="Cannoneer" description="Equiped with TNT to use with the cannons on the map." icon="tnt">
         <kit>
             <item slot="0" unbreakable="true">stone sword</item>
             <item slot="1" amount="64">tnt</item>
@@ -217,8 +217,8 @@
             <material>wood stairs</material>
         </any>
     </not>
-    <any id="only-cannoner">
-        <class>cannoner</class>
+    <any id="only-cannoneer">
+        <class>cannoneer</class>
     </any>
 </filters>
 <regions>

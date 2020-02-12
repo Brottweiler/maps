@@ -294,6 +294,13 @@
 <tnt>
     <blockdamage>off</blockdamage>
 </tnt>
+<damage ally="false" self="false">
+    <deny>
+        <any>
+            <region id="bases"/>
+        </any>
+    </deny>
+</damage>
 <itemremove>
     <item>potion</item>
     <item>leather helmet</item>

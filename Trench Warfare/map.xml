@@ -29,7 +29,7 @@
     <doFireTick>false</doFireTick>
 </gamerules>
 <broadcasts>
-    <tip every="2m" after="2s" count="oo">`3View classes with `b/classes`3 and select class with `b/class name</tip>
+    <tip every="2m" after="2s" count="oo">`3Switch `bclass`3 by clicking the `bsigns`3 in spawn!</tip>
     <tip every="2m" after="2s" count="oo" filter="only-cannoneer">`3Use your `bTNT`3 in the `bcannons`3 above spawn!</tip>
 </broadcasts>
 <teams>

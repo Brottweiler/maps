@@ -121,7 +121,6 @@
             <item slot="3" material="potion" name="10 Seconds of Invisibility">
                 <effect duration="10s">invisibility</effect>
             </item>
-            <item slot="8" amount="1" material="watch"/>
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>

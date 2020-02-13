@@ -18,7 +18,7 @@
 </score>
 <time>10m</time>
 <rules>
-    <rule>Switching/exchanging classses or items within a class is illegal.</rule>
+    <rule>Switching/exchanging classes or items within a class is illegal.</rule>
 </rules>
 <hunger>
     <depletion>off</depletion>
@@ -29,12 +29,12 @@
     <doFireTick>false</doFireTick>
 </gamerules>
 <broadcasts>
-    <tip every="2m" after="2s" count="oo">`3Switch `bclass`3 by clicking the `bsigns`3 in spawn!</tip>
+    <tip every="2m" after="2s" count="oo">`3Switch class by `bright clicking`3 the `bsigns`3 left and right of spawn!</tip>
     <tip every="2m" after="2s" count="oo" filter="only-cannoneer">`3Use your `bTNT`3 in the `bcannons`3 above spawn!</tip>
 </broadcasts>
 <teams>
-    <team id="blues" color="blue" max="20" show-name-tags="allies">Blue</team>
-    <team id="reds" color="dark red" max="20" show-name-tags="allies">Red</team>
+    <team id="blues" color="blue" max="25" show-name-tags="allies">Blue</team>
+    <team id="reds" color="dark red" max="25" show-name-tags="allies">Red</team>
 </teams>
 <spawns>
     <spawn team="blues">

@@ -177,7 +177,7 @@
     <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="golden apple">
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
-            <item slot="1" damage="16389" amount="-1" material="potion"/> <!-- in a perfect world this should be infinite use -->
+            <item slot="1" damage="16389" amount="16" material="potion"/>
             <helmet material="gold helmet" unbreakable="true"/>
             <chestplate material="gold chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>

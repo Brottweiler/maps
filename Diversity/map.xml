@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.4.0">
 <name>Diversity</name>
-<version>1.5.1</version>
+<version>1.5.2</version>
 <objective>Take the enemy's wool located to either side of the enemy's base and place it in your victory monument!</objective>
 <authors>
     <author uuid="bdb417b7-8d57-460f-951e-69dfaf764430"/> <!--CeFour -->
@@ -87,9 +87,9 @@
     <!-- Spawn regions -->
     <cuboid    id="defaultSpawn"        min="-45,59,-69"  max="-42,59,-72" />
     <cuboid    id="redSpawn"            min="-92,18,26"   max="-94,18,28" />
-    <rectangle id="redSpawnProtection"  min="-89,14"      max="-98,28" />
+    <rectangle id="redSpawnProtection"  min="-88,14"      max="-98,28" />
     <cuboid    id="blueSpawn"           min="-92,18,-167" max="-94,19,-168" />
-    <rectangle id="blueSpawnProtection" min="-98,-156"    max="-89,-170" />
+    <rectangle id="blueSpawnProtection" min="-98,-156"    max="-88,-170" />
     <!-- Wool regions -->
     <cuboid id="redMonument"        min="-90,0,-21"  max="-97,12,-25" />
     <union  id="redWoolRooms">

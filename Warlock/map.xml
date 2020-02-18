@@ -111,10 +111,9 @@
             <cuboid min="54,5,32" max="61,11,39"/>
         </union>
     </apply>
-    <apply block="deny-all">
+    <apply block="deny-all" message="You may not build outside of the map!">
         <negative>
-            <cuboid min="55,40,-oo" max="60,-oo,oo"/>
-            <cuboid min="-oo,-oo,-oo" max="121,22,oo"/>
+            <rectangle min="26,-49" max="120,50"/>
         </negative>
     </apply>
     <apply use="no-beacon">

@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
 <map proto="1.3.0">
 <name>Race for Victory</name>
-<version>1.1.10</version>
+<version>1.1.11</version>
 <objective>Take the enemy's wool located to either side of the enemy's base and place it in your victory monument.</objective>
 <authors>
     <author uuid="ef4ea031-998f-4ec9-b7b6-1bdd428bcef8">Plastix</author>
     <author uuid="3c7db14d-ac4b-4e35-b2c6-3b2237f382be">MonsieurApple</author>
     <author uuid="25961a08-c90c-4abd-b136-dad90e89c2eb">Anxuiz</author>
 </authors>
+<rules>
+    <rule>Players may not obstruct the wool rooms with lava or obsidian.</rule>
+    <rule>Players may not obstruct the majority of the lane with lava or obsidian.</rule>
+    <rule>Players may not use lava or obsidian to block a team's spawn.</rule>
+    <rule>Players may not venture below the bottom bedrock layer of the map.</rule>
+</rules>
 <teams>
     <team color="blue" max="20">Blue Team</team>
     <team color="dark red" max="20">Red Team</team>

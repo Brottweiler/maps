@@ -123,7 +123,7 @@
         </negative>
     </apply>
 </regions>
-<maxbuildheight>69</maxbuildheight> <!-- Change this -->
+<maxbuildheight>25</maxbuildheight>
 <killreward>
     <item>gold nugget</item>
 </killreward>

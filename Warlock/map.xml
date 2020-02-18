@@ -1,14 +1,21 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>Warlock</name>
-<version>1.3.5</version>
+<version>1.3.6</version>
 <objective>Break the obsidian from the enemy team's monument.</objective>
 <authors>
-    <author uuid="e5953ddf-c1fc-4405-9ac9-6939631cd185">McSpider</author>
+    <author uuid="e5953ddf-c1fc-4405-9ac9-6939631cd185"/> <!-- McSpider -->
 </authors>
+<contributors>
+    <contributor uuid="ef4ea031-998f-4ec9-b7b6-1bdd428bcef8" contribution="Map Feedback and XML Coding"/> <!-- Plastix -->
+</contributors>
+<rules>
+    <rule>Don't spawn kill!</rule>
+    <rule>Don't block the spawns!</rule>
+</rules>
 <teams>
-    <team color="dark red" max="20">Red</team>
-    <team color="blue" max="20">Blue</team>
+    <team color="dark red" max="12">Red</team>
+    <team color="blue" max="12">Blue</team>
 </teams>
 <kits>
     <kit name="spawn">
@@ -50,7 +57,7 @@
         <point>133.5,22,0.5</point>
     </default>
 </spawns>
-<destroyables name="Monument" materials="obsidian">
+<destroyables name="Monument" materials="obsidian" mode-changes="true">
     <destroyable owner="red">
         <cuboid min="77,1,-36" max="78,3,-37"/>
     </destroyable>
@@ -58,6 +65,9 @@
         <cuboid min="77,1,37" max="78,3,38"/>
     </destroyable>
 </destroyables>
+<modes>
+    <mode material="beacon" after="20m"/>
+</modes>
 <toolrepair>
     <tool>iron sword</tool>
     <tool>diamond pickaxe</tool>
@@ -113,6 +123,7 @@
         </negative>
     </apply>
 </regions>
+<maxbuildheight>69</maxbuildheight> <!-- Change this -->
 <killreward>
     <item>gold nugget</item>
 </killreward>
@@ -121,4 +132,4 @@
     <licensing>off</licensing>
     <friendly-defuse>off</friendly-defuse>
 </tnt>
-</map> 
+</map>

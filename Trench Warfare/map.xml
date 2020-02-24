@@ -178,6 +178,7 @@
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
             <item slot="1" damage="16389" amount="16" material="potion"/>
+            <item slot="2" damage="16424" amount="8" material="potion"/> <!-- Healing pots seems to have made enemies weak, so let's give weakness potions instead -->
             <helmet material="gold helmet" unbreakable="true"/>
             <chestplate material="gold chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>

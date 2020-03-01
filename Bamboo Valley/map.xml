@@ -1,6 +1,6 @@
 <map proto="1.3.2">
 <name>Bamboo Valley</name>
-<version>1.2.1</version>
+<version>1.2.2</version>
 <objective>Capture the opposing team's wool and place it at your victory monument.</objective>
 <authors>
     <author uuid="621b2aa8-4e5f-4ed8-bd36-0ae2f8952a06"/>
@@ -39,16 +39,16 @@
 </kits>
 <spawns>
     <spawn team="red" kit="red" yaw="-135">
-        <cuboid min="-185,60,47" max="-183,60,45"/>
+        <cuboid min="-185,60.5,47" max="-183,60.5,45"/>
     </spawn>
     <spawn team="red" kit="red" yaw="-45">
-        <cuboid min="-185,60,20" max="-183,60,22"/>
+        <cuboid min="-185,60.5,20" max="-183,60.5,22"/>
     </spawn>
     <spawn team="blue" kit="blue" yaw="135">
-        <cuboid min="166,60,47" max="164,60,45"/>
+        <cuboid min="166,60.5,47" max="164,60.5,45"/>
     </spawn>
     <spawn team="blue" kit="blue" yaw="45">
-        <cuboid min="166,60,20" max="164,60,22"/>
+        <cuboid min="166,60.5,20" max="164,60.5,22"/>
     </spawn>
     <default yaw="-90">
         <cylinder base="-9.5,71,33.5" radius="1" height="0"/>
@@ -66,6 +66,7 @@
         </allow>
         <deny>
             <block>chest</block>
+            <block>mob spawner</block>
         </deny>
     </filter>
     <filter name="only-blue" parents="deny-all">
@@ -74,6 +75,7 @@
         </allow>
         <deny>
             <block>chest</block>
+            <block>mob spawner</block>
         </deny>
     </filter>
     <filter name="only-red-usage">
@@ -108,7 +110,6 @@
     </filter>
     <filter name="deny-spawner">
         <not>
-            <block>mob spawner</block>
             <block>chest</block>
         </not>
     </filter>
@@ -123,21 +124,21 @@
         <cuboid min="85,24,113" max="153,0,-46"/>
         <cuboid min="-104,24,-46" max="-172,0,113"/>
     </apply>
-    <apply block="only-blue deny-spawner" use="only-blue-usage" message="You may not modify your own wool room!">
-        <cylinder base="-123,0,99" radius="9" height="oo"/>
-        <cylinder base="-123,0,-33" radius="9" height="oo"/>
+    <apply block="only-blue" use="only-blue-usage">
+        <cylinder base="-123.5,0,99.5" radius="9.5" height="oo"/>
+        <cylinder base="-123.5,0,-32.5" radius="9.5" height="oo"/>
     </apply>
     <apply enter="only-blue" message="You may not enter your own wool room!">
-        <cylinder base="-123,0,99" radius="9" height="oo"/>
-        <cylinder base="-123,0,-33" radius="9" height="oo"/>
+        <cylinder base="-123.5,0,99.5" radius="9.5" height="oo"/>
+        <cylinder base="-123.5,0,-32.5" radius="9.5" height="oo"/>
     </apply>
-    <apply block="only-red deny-spawner" use="only-red-usage" message="You may not modify your own wool room!">
-        <cylinder base="104,0,-33" radius="9" height="oo"/>
-        <cylinder base="104,0,99" radius="9" height="oo"/>
+    <apply block="only-red" use="only-red-usage">
+        <cylinder base="104.5,0,-32.5" radius="9.5" height="oo"/>
+        <cylinder base="104.5,0,99.5" radius="9.5" height="oo"/>
     </apply>
     <apply enter="only-red" message="You may not enter your own wool room!">
-        <cylinder base="104,0,-33" radius="9" height="oo"/>
-        <cylinder base="104,0,99" radius="9" height="oo"/>
+        <cylinder base="104.5,0,-32.5" radius="9.5" height="oo"/>
+        <cylinder base="104.5,0,99.5" radius="9.5" height="oo"/>
     </apply>
     <apply block="deny-all" block-break="only-iron" use="deny-dispenser" message="You may only break iron in this area!">
         <rectangle min="-190,52" max="-134,15"/>

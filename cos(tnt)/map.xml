@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.5">
 <name>cos(tnt)</name>
-<version>0.83</version>
+<version>0.84</version>
 <objective>You must be the first team to get to 2,750 points before time runs out!</objective>
 <authors>
     <author uuid="dad8b95c-cf6a-44df-982e-8c8dd70201e0"/> <!-- ElectroidFilms -->

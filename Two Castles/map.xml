@@ -19,11 +19,11 @@
 </teams>
 <flags>
     <flag id="blue-flag" name="Blue Flag" owner="blue-team">
-        <post pickup-filter="only-red">0,11,93</post>
+        <post pickup-filter="only-red">16,11,-92</post>
     </flag>
 
     <flag id="red-flag" name="Red Flag" owner="red-team">
-        <post pickup-filter="only-blue">0,11,-92</post>
+        <post pickup-filter="only-blue">-15,11,93</post>
     </flag>
     <flags points="1">
         <net region="red-net" flag="blue-flag" rescue="red-flag"/>
@@ -94,8 +94,8 @@
     <apply block="deny-all" message="This tree is protected, go figure.">
         <circle center="83.5,-47.5" radius="4"/>
     </apply>
-    <!-- Blue Team Flag -->
-    <cylinder name="blue-net" base="16.5,11,-92.5" radius="3" height="3"/>
+    <!-- Blue Team Flag Net -->
+    <cylinder name="blue-net" base="85.5,10,85.5" radius="6" height="3"/>
     <!-- Red Team Base -->
     <apply enter="only-red" message="You may not enter the enemy team's base!">
         <cuboid min="20,8,75" max="-10,40,63"/>
@@ -110,7 +110,7 @@
         <circle center="-82.5,48.5" radius="4"/>
     </apply>
     <!-- Red Team Flag -->
-    <cylinder name="red-net" base="-15.5,11,93.5" radius="3" height="3"/>
+    <cylinder name="red-net" base="-86.5,10,-86.5" radius="6" height="3"/>
     <!--- Main Playing Area -->
     <apply block="deny-all" message="You may not build outside the playing area.">
         <negative name="playable-inverse">

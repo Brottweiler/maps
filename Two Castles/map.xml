@@ -1,24 +1,35 @@
 <?xml version="1.0"?>
 <map proto="1.3.0">
 <name>Two Castles</name>
-<version>1.0.3</version>
-<objective>Take the enemy's wool located behind the enemy's base and place it in your victory monument.</objective>
+<version>2.0</version>
+<objective>Take the enemy's flag located behind the enemy's base and capture it at your victory monument.</objective>
 <authors>
     <author uuid="e5953ddf-c1fc-4405-9ac9-6939631cd185"/> <!-- McSpider -->
     <author uuid="3ce426cd-2ded-4f83-a9bb-46a57d68d9a5"/> <!-- McYukon -->
 </authors>
+<contributors>
+    <contributor uuid="6968cbde-c2b7-479c-a8da-f33f109f013b" contribution="Capture the Flag version"/> <!-- Brottweiler -->
+</contributors>
+<score>
+    <limit>1</limit>
+</score>
 <teams>
-    <team color="dark red" max="20">Red</team>
-    <team color="blue" max="20">Blue</team>
+    <team id="red-team" color="dark red" max="20">Red</team>
+    <team id="blue-team" color="blue" max="20">Blue</team>
 </teams>
-<wools>
-    <wool team="blue" color="pink">
-        <block>0.5,11,-92.5</block>
-    </wool>
-    <wool team="red" color="light blue">
-        <block>0.5,11,93.5</block>
-    </wool>
-</wools>
+<flags>
+    <flag id="blue-flag" name="Blue Flag" owner="blue-team">
+        <post pickup-filter="only-red">0,11,93</post>
+    </flag>
+
+    <flag id="red-flag" name="Red Flag" owner="red-team">
+        <post pickup-filter="only-blue">0,11,-92</post>
+    </flag>
+    <flags points="1">
+        <net region="red-net" flag="blue-flag" rescue="red-flag"/>
+        <net region="blue-net" flag="red-flag" rescue="blue-flag"/>
+    </flags>
+</flags>
 <kits>
     <kit name="spawn">
         <item slot="0">iron sword</item>
@@ -43,10 +54,10 @@
         <leggings color="0066cc">leather leggings</leggings>
         <boots enchantment="protection fall:1">iron boots</boots>
     </kit>
-    <kit name="blue_wool" force="true">
+    <kit name="blue-net" force="true">
         <helmet damage="3">wool</helmet>
     </kit>
-    <kit name="red_wool" force="true">
+    <kit name="red-net" force="true">
         <helmet damage="6">wool</helmet>
     </kit>
 </kits>
@@ -63,10 +74,10 @@
 </spawns>
 <filters>
     <filter name="only-red">
-        <team>red</team>    
+        <team>red</team>
     </filter>
     <filter name="only-blue">
-        <team>blue</team>    
+        <team>blue</team>
     </filter>
 </filters>
 <regions>
@@ -83,16 +94,8 @@
     <apply block="deny-all" message="This tree is protected, go figure.">
         <circle center="83.5,-47.5" radius="4"/>
     </apply>
-    <!-- Blue Team Dispenser -->
-    <apply kit="blue_wool">
-        <circle name="blue-dispenser" center="16.5,-92.5" radius="5"/> <!-- Give light blue wool -->
-    </apply>
-    <apply block="deny-all" message="You may not modify the wool dispenser!">
-        <region name="blue-dispenser"/>
-    </apply>
-    <apply enter="only-red" message="You may not enter your own wool dispenser!">
-        <region name="blue-dispenser"/>
-    </apply>
+    <!-- Blue Team Flag -->
+    <cylinder name="blue-net" base="16.5,11,-92.5" radius="3" height="3"/>
     <!-- Red Team Base -->
     <apply enter="only-red" message="You may not enter the enemy team's base!">
         <cuboid min="20,8,75" max="-10,40,63"/>
@@ -106,16 +109,8 @@
     <apply block="deny-all" message="This tree is protected, go figure.">
         <circle center="-82.5,48.5" radius="4"/>
     </apply>
-    <!-- Red Team Dispenser -->
-    <apply kit="red_wool">
-        <circle name="red-dispenser" center="-15.5,93.5" radius="5"/>  <!-- Give pink wool -->
-    </apply>
-    <apply block="deny-all" message="You may not modify the wool dispenser!">
-        <region name="red-dispenser"/>
-    </apply>
-    <apply enter="only-blue" message="You may not enter your own wool dispenser!">
-        <region name="red-dispenser"/>
-    </apply>
+    <!-- Red Team Flag -->
+    <cylinder name="red-net" base="-15.5,11,93.5" radius="3" height="3"/>
     <!--- Main Playing Area -->
     <apply block="deny-all" message="You may not build outside the playing area.">
         <negative name="playable-inverse">

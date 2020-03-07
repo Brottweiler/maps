@@ -422,7 +422,7 @@
 <broadcasts>
     <alert after="1s">`a`oEvery `65 `a`ominutes there is an iron supply drop</alert>
     <alert after="2s">`a`oEvery `610 `a`ominutes there is a diamond supply drop</alert>
-    <alert after="10m30s" every="2m30s">Diamond boots give anti-knockback to the player wearing them!</alert>
+    <alert after="10m30s" every="2m30s">Diamond boots give anti-knockback to the players wearing them!</alert>
 </broadcasts>
 <itemremove>
     <item>diamond pickaxe</item>

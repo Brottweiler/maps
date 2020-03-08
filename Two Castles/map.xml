@@ -53,20 +53,20 @@
         <leggings color="0066cc">leather leggings</leggings>
         <boots enchantment="protection fall:1">iron boots</boots>
     </kit>
-    <kit id="blue-net" force="true">
+        <!--<kit id="blue-net" force="true">
         <helmet damage="3">wool</helmet>
     </kit>
     <kit id="red-net" force="true">
         <helmet damage="6">wool</helmet>
-    </kit>
+        </kit>-->
 </kits>
 <spawns>
-    <spawn team="red" kit="red" yaw="90" safe="true">
+    <spawn team="red-team" kit="red" yaw="90" safe="true">
         <region>
             <cuboid min="-2,14,71" max="-9,14,78"/>
         </region>
     </spawn>
-    <spawn team="blue" kit="blue" yaw="-90" safe="true">
+    <spawn team="blue-team" kit="blue" yaw="-90" safe="true">
         <region>
             <cuboid min="2,14,-71" max="9,14,-78"/>
         </region>
@@ -92,19 +92,19 @@
             </union>
         </region>
     </apply>
-    <apply block="deny-all">
+    <apply block="never">
         <region>
             <cuboid min="-24,8,-58" max="24,40,-100"/>
         </region>
     </apply>
     <!-- Blue Team Tree -->
-    <apply block="deny-all" message="This tree is protected, go figure.">
+    <apply block="never" message="This tree is protected, go figure.">
         <region>
             <circle center="83.5,-47.5" radius="4"/>
         </region>
     </apply>
     <!-- Blue Team Flag Net -->
-    <cylinder name="blue-net" base="85.5,10,85.5" radius="6" height="3"/>
+    <cylinder id="blue-net" base="85.5,10,85.5" radius="6" height="3"/>
     <!-- Red Team Base -->
     <apply enter="only-red" message="You may not enter the enemy team's base!">
         <region>
@@ -115,21 +115,21 @@
             </union>
         </region>
     </apply>
-    <apply block="deny-all">
+    <apply block="never">
         <region>
             <cuboid min="24,8,58" max="-24,40,100"/>
         </region>
     </apply>
     <!-- Red Team Tree -->
-    <apply block="deny-all" message="This tree is protected, go figure.">
+    <apply block="never" message="This tree is protected, go figure.">
         <region>
             <circle center="-82.5,48.5" radius="4"/>
         </region>
     </apply>
     <!-- Red Team Flag -->
-    <cylinder name="red-net" base="-86.5,10,-86.5" radius="6" height="3"/>
+    <cylinder id="red-net" base="-86.5,10,-86.5" radius="6" height="3"/>
     <!--- Main Playing Area -->
-    <apply block="deny-all" message="You may not build outside the playing area.">
+    <apply block="never" message="You may not build outside the playing area.">
         <region>
             <negative name="playable-inverse">
                 <rectangle min="101,101" max="-100,-100"/>

@@ -94,7 +94,7 @@
     <class name="Pyro" description="A unit that specializes in fire." icon="flint and steel">
         <kit>
             <item slot="0" enchantment="fire aspect:2" unbreakable="true" material="stone sword"/>
-            <item slot="1" damage="55" material="flint and steel"/>
+            <item slot="1" material="flint and steel"/>
             <helmet material="chainmail helmet" enchantment="fire_protection:3" unbreakable="true"/>
             <chestplate material="chainmail chestplate" enchantment="fire_protection:3" unbreakable="true"/>
             <leggings material="chainmail leggings" enchantment="fire_protection:3" unbreakable="true"/>
@@ -107,37 +107,30 @@
             <item slot="1" enchantment="sharpness:10" damage="1651" material="diamond sword"/>
             <helmet material="gold helmet" unbreakable="true"/>
             <boots material="leather boots" unbreakable="true"/>
-            <effect duration="oo">speed</effect>
+            <effect duration="oo" amplifier="2">speed</effect>
         </kit>
     </class>
-    <class name="Spy" description="Able to turn invisible for 10 seconds!" icon="watch">
+    <class name="Spy" description="Able to turn invisible!" icon="watch">
         <kit>
             <item slot="0" enchantment="sharpness:2" unbreakable="true" material="iron sword"/>
-                <!-- <item slot="1" damage="8238">potion</item> --> <!-- potion of invisibility -->
-            <!-- Give two potions because old kit had two clocks -->
-            <item slot="2" material="potion" name="10 Seconds of Invisibility">
-                <effect duration="10s">invisibility</effect>
-            </item>
-            <item slot="3" material="potion" name="10 Seconds of Invisibility">
-                <effect duration="10s">invisibility</effect>
-            </item>
+            <item slot="1" damage="8238">potion</item> <!-- potion of invisibility -->
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>
             <boots material="chainmail boots" unbreakable="true"/>
-            <effect duration="oo" amplifier="2">speed</effect>
+            <effect duration="oo">speed</effect>
         </kit>
     </class>
 
     <!-- Defensive classes -->
     <class name="Heavy" description="A class with good armor and deals high damage but slow movement speed." icon="diamond helmet">
         <kit>
-            <item slot="0" enchantment="sharpness" unbreakable="true" material="diamond sword"/>
+            <item slot="0" unbreakable="true" material="diamond sword"/>
             <helmet material="diamond helmet" enchantment="protection" unbreakable="true"/>
             <chestplate material="diamond chestplate" enchantment="protection" unbreakable="true"/>
             <leggings material="diamond leggings" enchantment="protection" unbreakable="true"/>
             <boots material="diamond boots" enchantment="protection" unbreakable="true"/>
-            <effect duration="oo">slowness</effect>
+            <effect duration="oo" amplifier="2">slowness</effect>
         </kit>
     </class>
     <class name="Engineer" description="Can create defenses on the map to provide cover." icon="wood">
@@ -166,7 +159,7 @@
     <class name="Sniper" description="A unit equiped with a bow but has low armor." icon="bow">
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
-            <item slot="1" enchantment="infinity;punch:2;power:2" unbreakable="true" material="bow"/>
+            <item slot="1" enchantment="infinity;punch:1;power:3" unbreakable="true" material="bow"/>
             <item slot="28" material="arrow"/>
             <helmet material="chainmail helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>

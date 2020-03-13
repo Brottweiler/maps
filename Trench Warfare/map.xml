@@ -170,8 +170,15 @@
     <class name="Medic" description="Able to heal friendly units, but make enemy units weak." icon="golden apple">
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
-            <item slot="1" damage="16389" amount="16" material="potion"/>
-            <item slot="2" damage="16424" amount="8" material="potion"/> <!-- Healing pots seems to have made enemies weak, so let's give weakness potions instead -->
+            <item slot="1" damage="16389" amount="8" material="potion"/>
+            <item slot="2" damage="16389" amount="8" material="potion"/>
+            <item slot="3" damage="16389" amount="8" material="potion"/>
+            <item slot="4" damage="16389" amount="8" material="potion"/>
+            <item slot="5" damage="16389" amount="8" material="potion"/>
+            <item slot="6" damage="16389" amount="8" material="potion"/>
+            <!-- Healing pots seems to have made enemies weak, so let's give weakness potions instead -->
+            <item slot="7" damage="16424" amount="4" material="potion"/>
+            <item slot="8" damage="16424" amount="4" material="potion"/>
             <helmet material="gold helmet" unbreakable="true"/>
             <chestplate material="gold chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>

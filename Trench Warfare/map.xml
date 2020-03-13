@@ -159,7 +159,7 @@
     <class name="Sniper" description="A unit equiped with a bow but has low armor." icon="bow">
         <kit>
             <item slot="0" unbreakable="true" material="stone sword"/>
-            <item slot="1" enchantment="infinity;punch:1;power:3" unbreakable="true" material="bow"/>
+            <item slot="1" enchantment="infinity;power:2" unbreakable="true" material="bow"/>
             <item slot="28" material="arrow"/>
             <helmet material="chainmail helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>

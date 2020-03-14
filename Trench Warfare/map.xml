@@ -114,6 +114,8 @@
         <kit>
             <item slot="0" enchantment="sharpness:2" unbreakable="true" material="iron sword"/>
             <item slot="1" damage="8238">potion</item> <!-- potion of invisibility -->
+            <item slot="2" damage="8238">potion</item> <!-- potion of invisibility -->
+            <item slot="3" damage="8238">potion</item> <!-- potion of invisibility -->
             <helmet material="iron helmet" unbreakable="true"/>
             <chestplate material="leather chestplate" unbreakable="true"/>
             <leggings material="gold leggings" unbreakable="true"/>

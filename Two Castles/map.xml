@@ -18,10 +18,10 @@
     <team id="blue-team" color="blue" max="20">Blue</team>
 </teams>
 <flags>
-    <flag id="blue-flag" name="Blue Flag" owner="blue-team">
+    <flag id="blue-flag" name="Blue Flag" owner="blue-team" pickup-kit="flag">
         <post pickup-filter="only-red">16.5,10,-92.5</post>
     </flag>
-    <flag id="red-flag" name="Red Flag" owner="red-team">
+    <flag id="red-flag" name="Red Flag" owner="red-team" pickup-kit="flag">
         <post pickup-filter="only-blue">-15.5,10,93.5</post>
     </flag>
     <flags points="1">
@@ -39,7 +39,7 @@
         <item slot="5" amount="16">glass</item>
         <item slot="6" amount="64">log</item>
         <item slot="8" amount="64">apple</item>
-        <potion duration="10" amplifer="4">damage resistance</potion>
+        <effect duration="10" amplifer="4">damage resistance</effect>
     </kit>
     <kit id="red" parents="spawn">
         <helmet color="cd0000">leather helmet</helmet>
@@ -53,12 +53,9 @@
         <leggings color="0066cc">leather leggings</leggings>
         <boots enchantment="protection fall:1">iron boots</boots>
     </kit>
-        <!--<kit id="blue-net" force="true">
-        <helmet damage="3">wool</helmet>
+    <kit id="flag">
+        <effect amplifier="1">slow</effect>
     </kit>
-    <kit id="red-net" force="true">
-        <helmet damage="6">wool</helmet>
-        </kit>-->
 </kits>
 <spawns>
     <spawn team="red-team" kit="red" yaw="90" safe="true">
@@ -94,7 +91,7 @@
     </apply>
     <apply block="never">
         <region>
-            <cuboid min="-24,8,-58" max="24,40,-100"/>
+            <cuboid min="-24,8,-58" max="14,40,-83"/>
         </region>
     </apply>
     <!-- Blue Team Tree -->
@@ -104,7 +101,7 @@
         </region>
     </apply>
     <!-- Blue Team Flag Net -->
-    <cylinder id="blue-net" base="85.5,10,85.5" radius="6" height="3"/>
+    <cylinder id="blue-net" base="0.5,9,-91.5" radius="2" height="3"/>
     <!-- Red Team Base -->
     <apply enter="only-red" message="You may not enter the enemy team's base!">
         <region>
@@ -117,7 +114,7 @@
     </apply>
     <apply block="never">
         <region>
-            <cuboid min="24,8,58" max="-24,40,100"/>
+            <cuboid min="24,8,58" max="-13,40,84"/>
         </region>
     </apply>
     <!-- Red Team Tree -->
@@ -126,8 +123,8 @@
             <circle center="-82.5,48.5" radius="4"/>
         </region>
     </apply>
-    <!-- Red Team Flag -->
-    <cylinder id="red-net" base="-86.5,10,-86.5" radius="6" height="3"/>
+    <!-- Red Team Flag Net -->
+    <cylinder id="red-net" base="0.5,9,92.5" radius="2" height="3"/>
     <!--- Main Playing Area -->
     <apply block="never" message="You may not build outside the playing area.">
         <region>
@@ -135,6 +132,14 @@
                 <rectangle min="101,101" max="-100,-100"/>
             </negative>
         </region>
+    </apply>
+    <apply block="never" message="You may not destroy the flag platform">
+        <region>
+            <union>
+                <cylinder base="16.5,10,-92.5" radius="4" height="5"/>
+                <cylinder base="-15.5,10,93.5" radius="4" height="5"/>
+            </union>
+    </region>
     </apply>
 </regions>
 <toolrepair>

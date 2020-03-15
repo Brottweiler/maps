@@ -19,10 +19,10 @@
 </teams>
 <flags>
     <flag id="blue-flag" name="Blue Flag" owner="blue-team">
-        <post pickup-filter="only-red">16,10,-92</post>
+        <post pickup-filter="only-red">16.5,10,-92.5</post>
     </flag>
     <flag id="red-flag" name="Red Flag" owner="red-team">
-        <post pickup-filter="only-blue">-15,10,93</post>
+        <post pickup-filter="only-blue">-15.5,10,93.5</post>
     </flag>
     <flags points="1">
         <net region="red-net" flag="blue-flag" rescue="red-flag"/>
